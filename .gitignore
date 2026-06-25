@@ -1,0 +1,9 @@
+site/
+.cache/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
