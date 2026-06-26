@@ -123,10 +123,16 @@ code {
 
 .navbar-nav {
     display: flex;
+    flex-direction: row;
     list-style: none;
     gap: 0.25rem;
     margin: 0;
     padding: 0;
+    align-items: center;
+}
+
+.navbar-nav li {
+    display: flex;
     align-items: center;
 }
 
