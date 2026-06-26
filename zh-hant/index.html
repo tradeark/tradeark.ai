@@ -44,7 +44,7 @@
                         <a class="nav-link" href="/zh-hant/#product-ui">產品</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/zh-hant/#ai-risk-control-home">Risk Control</a>
+                        <a class="nav-link" href="/zh-hant/#ai-risk-control-home">風控</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/zh-hant/#install">安裝</a>
@@ -57,7 +57,7 @@
                     </li>
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-sm btn-warning nav-cta" href="/zh-hant/#install">
-                            <i class="bi bi-download me-1"></i>Install
+                            <i class="bi bi-download me-1"></i>安裝
                         </a>
                     </li>
                     
@@ -108,29 +108,29 @@
     <div class="hero-scanline" aria-hidden="true"></div>
     <div class="container hero-command-layout">
         <div class="hero-copy">
-            <span class="eyebrow">TradeArk Local Command</span>
+            <span class="eyebrow">TradeArk 本地指揮台</span>
             <h1 class="display-4 fw-bold mb-4">
                 <span class="hero-title-line">TradeArk</span>
-                <span class="hero-title-line">AI trading, routed through your machine</span>
+                <span class="hero-title-line">AI 交易，經由你的本機路由</span>
             </h1>
-            <p class="lead mb-4">Run AI agents against a local trading screen and HTTP API. Read charts, balances, positions, and settings locally, then let protected exchange writes pass through named clients, policy gates, and live watchdogs before anything reaches Binance, OKX, Bybit, Bitget, Gate, or other supported exchanges.</p>
+            <p class="lead mb-4">讓 AI 智能體連接本地交易介面和 HTTP API。圖表、餘額、持倉和設定都在本地讀取；受保護的交易所寫入請求會先經過具名用戶端、策略閘道和即時看護器，再到達 Binance、OKX、Bybit、Bitget、Gate 或其他受支援交易所。</p>
             <div class="hero-actions">
                 <a href="#install" class="btn btn-warning btn-lg px-4">
                     <i class="bi bi-download me-2"></i>安裝詳情
                 </a>
                 <a href="#product-ui" class="btn btn-outline-dark btn-lg px-4">
-                    <i class="bi bi-window-stack me-2"></i>View Product UI
+                    <i class="bi bi-window-stack me-2"></i>查看產品介面
                 </a>
             </div>
         </div>
-        <div class="hero-hud" aria-label="TradeArk live status preview">
+        <div class="hero-hud" aria-label="TradeArk 即時狀態預覽">
             <div class="hud-row">
-                <span>LOCAL NODE</span>
+                <span>本地節點</span>
                 <strong>127.0.0.1:38182</strong>
             </div>
             <div class="hud-row">
-                <span>RISK ENGINE</span>
-                <strong>ARMED</strong>
+                <span>風控引擎</span>
+                <strong>已啟用</strong>
             </div>
             <div class="hud-row hud-row-market">
                 <span>BTC/USDT</span>
@@ -141,15 +141,15 @@
         <div class="hero-command-strip">
             <div>
                 <strong>29</strong>
-                <span>HTTP endpoints</span>
+                <span>HTTP 端點</span>
             </div>
             <div>
-                <strong>Local</strong>
-                <span>Keys stay on this machine</span>
+                <strong>本地</strong>
+                <span>金鑰保留在本機</span>
             </div>
             <div>
-                <strong>Policy</strong>
-                <span>Symbol, leverage, notional, route</span>
+                <strong>策略</strong>
+                <span>交易對、槓桿、名義金額、路由</span>
             </div>
         </div>
     </div>
@@ -161,8 +161,8 @@
             <div class="row align-items-center g-4 g-lg-5">
                 <div class="col-lg-5">
                     <span class="badge bg-warning text-dark mb-3 px-3 py-2">產品介面預覽</span>
-                    <h2 class="display-6 fw-bold mb-3">See what TradeArk looks like before you install</h2>
-                    <p class="lead text-muted mb-4">TradeArk serves a local web interface at /. Traders and AI agents can watch charts, switch Binance, OKX, Bybit, Bitget, Gate, and other supported exchanges, inspect positions and balances, run AI automation, place manual orders, and manage batch trading from one unified screen.</p>
+                    <h2 class="display-6 fw-bold mb-3">安裝前先看看 TradeArk 的介面</h2>
+                    <p class="lead text-muted mb-4">TradeArk 在 / 提供本地 Web 介面。交易員和 AI 智能體可以在同一個介面中查看圖表、切換 Binance、OKX、Bybit、Bitget、Gate 等受支援交易所、檢查持倉和餘額、運行 AI 自動化、手動下單，並管理批量交易。</p>
                     <div class="ui-showcase-metrics">
                         <div class="ui-showcase-chip">
                             <i class="bi bi-graph-up-arrow"></i>
@@ -186,7 +186,7 @@
                     <div class="ui-showcase-frame">
                         <img
                             src="/static/img/tradeark-firewall-home.png"
-                            alt="TradeArk trading UI screenshot"
+                            alt="TradeArk 交易介面截圖"
                             class="img-fluid ui-showcase-image"
                             loading="lazy"
                         >
@@ -200,9 +200,9 @@
 <section id="ai-risk-control-home" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="badge bg-warning text-dark mb-3 px-3 py-2">AI Risk Control</span>
-            <h2 class="display-6 fw-bold">Let AI trade through a local firewall, not through raw exchange keys</h2>
-            <p class="lead text-muted section-lead">TradeArk includes a built-in two-layer AI trading firewall for OpenClaw, Claude Code, Codex, and similar local agents. Create a named AI client in the local Web UI, generate a ready-to-paste prompt, and keep TradeArk enforcing limits before any exchange write leaves the machine.</p>
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2">AI 風控防火牆</span>
+            <h2 class="display-6 fw-bold">讓 AI 透過本地防火牆交易，而不是直接持有原始交易所金鑰</h2>
+            <p class="lead text-muted section-lead">TradeArk 內建兩層 AI 交易防火牆，面向 OpenClaw、Claude Code、Codex 等本地智能體。你可以在本地 Web UI 中建立具名 AI 用戶端，產生可直接貼上的提示詞，並讓 TradeArk 在任何交易所寫入請求離開本機前先執行限制。</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-xl-3">
@@ -210,8 +210,8 @@
                     <div class="feature-icon bg-gradient-warning">
                         <i class="bi bi-shield-lock-fill"></i>
                     </div>
-                    <h4>Per-agent token scope</h4>
-                    <p class="text-muted">Issue a separate AI client for each bot, workspace, or operator. Each token is bound to selected saved accounts and can be rotated or revoked instantly from the local Web UI.</p>
+                    <h4>按智能體劃分權杖範圍</h4>
+                    <p class="text-muted">為每個機器人、工作區或操作員單獨建立 AI 用戶端。每個權杖都綁定到選定的已儲存帳戶，並可在本地 Web UI 中即時輪換或撤銷。</p>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
@@ -219,8 +219,8 @@
                     <div class="feature-icon bg-gradient-info">
                         <i class="bi bi-sliders2-vertical"></i>
                     </div>
-                    <h4>Pre-trade policy engine</h4>
-                    <p class="text-muted">Before an order reaches the exchange, TradeArk can enforce route allowlists, symbol rules, asset scope, leverage ceilings, max quantity, max notional, and rate or daily limits.</p>
+                    <h4>交易前策略引擎</h4>
+                    <p class="text-muted">訂單到達交易所前，TradeArk 可以執行路由允許清單、交易對規則、資產範圍、槓桿上限、最大數量、最大名義金額以及頻率或每日限制。</p>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
@@ -228,8 +228,8 @@
                     <div class="feature-icon bg-gradient-danger">
                         <i class="bi bi-activity"></i>
                     </div>
-                    <h4>Live watchdog + kill switches</h4>
-                    <p class="text-muted">A second layer keeps watching balances and positions from the local executor. It can alert, cancel open orders, flatten swap exposure, or freeze a client or account when thresholds are hit.</p>
+                    <h4>即時看護與熔斷開關</h4>
+                    <p class="text-muted">第二層會持續透過本地執行器監控餘額和持倉。當觸發閾值時，它可以告警、撤銷掛單、平掉合約敞口，或凍結用戶端/帳戶。</p>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
@@ -237,18 +237,18 @@
                     <div class="feature-icon bg-gradient-success">
                         <i class="bi bi-magic"></i>
                     </div>
-                    <h4>Prompt-ready onboarding</h4>
-                    <p class="text-muted">The AI Risk panel can generate a ready-to-paste prompt for OpenClaw, Claude Code, Codex, and similar tools, so teams do not need to handwrite headers, account scope, or route rules.</p>
+                    <h4>可直接用於提示詞的接入流程</h4>
+                    <p class="text-muted">AI 風控面板可為 OpenClaw、Claude Code、Codex 等工具產生可直接貼上的提示詞，團隊無需手寫請求標頭、帳戶範圍或路由規則。</p>
                 </div>
             </div>
         </div>
         <div class="doc-note mt-4">
             <p class="text-muted mb-2">餘額、持倉、歷史等一般本機讀取都留在同一台機器上，而交易所寫入只需為每個請求加上已命名用戶端標記，就能在 AI 風控下走相同的本機交易路由。</p>
-            <p class="text-muted mb-0">Operators can rotate tokens in one click, freeze a client or account, and keep each AI workflow inside saved-account scope instead of handing out unrestricted live exchange keys.</p>
+            <p class="text-muted mb-0">操作員可以一鍵輪換權杖、凍結用戶端或帳戶，並把每個 AI 工作流程限制在已儲存帳戶範圍內，而不是發放不受限制的真實交易所金鑰。</p>
         </div>
         <div class="text-center mt-4">
             <a href="https://docs.tradeark.ai/#ai-risk-control" class="btn btn-outline-warning btn-lg px-4">
-                <i class="bi bi-shield-check me-2"></i>Read the full AI Risk Control guide
+                <i class="bi bi-shield-check me-2"></i>閱讀完整 AI 風控指南
             </a>
         </div>
     </div>
@@ -257,37 +257,37 @@
 <section id="ai-risk-workflow" class="py-5 bg-dark-gradient">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="badge bg-warning text-dark mb-3 px-3 py-2">AI Control Plane</span>
-            <h2 class="display-6 fw-bold">How the local AI risk loop works end to end</h2>
-            <p class="lead text-muted section-lead">The operator owns the control plane. AI gets prompt-ready access, TradeArk evaluates every protected write locally, and the exchange only sees requests that pass policy.</p>
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2">AI 控制平面</span>
+            <h2 class="display-6 fw-bold">本地 AI 風控閉環如何端到端運作</h2>
+            <p class="lead text-muted section-lead">控制平面由操作員掌握。AI 取得可直接使用的提示詞存取方式，TradeArk 在本地評估每個受保護寫入請求，交易所只會看到通過策略的請求。</p>
         </div>
         <div class="risk-flow-track mb-4">
-            <span class="risk-flow-node">Operator</span>
+            <span class="risk-flow-node">操作員</span>
             <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
             <span class="risk-flow-node">AI prompt</span>
             <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
-            <span class="risk-flow-node">Local reads</span>
+            <span class="risk-flow-node">本地讀取</span>
             <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
-            <span class="risk-flow-node">Protected writes</span>
+            <span class="risk-flow-node">受保護寫入</span>
             <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
-            <span class="risk-flow-node">Policy gate</span>
+            <span class="risk-flow-node">策略閘道</span>
             <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
             <span class="risk-flow-node">Exchange</span>
             <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
-            <span class="risk-flow-node">Watchdog</span>
+            <span class="risk-flow-node">看護器</span>
         </div>
         <div class="row g-4 mb-4">
             <div class="col-md-6 col-xl-3">
                 <div class="step-card h-100">
                     <div class="risk-step-badge mb-3">1</div>
-                    <h5>Create a named AI client</h5>
-                    <p class="text-muted mb-0">Bind it to saved accounts, allowed routes, and policy limits from the local Web UI.</p>
+                    <h5>建立具名 AI 用戶端</h5>
+                    <p class="text-muted mb-0">在本地 Web UI 中將它綁定到已儲存帳戶、允許路由和策略限制。</p>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
                 <div class="step-card h-100">
                     <div class="risk-step-badge mb-3">2</div>
-                    <h5>Generate a prompt the AI can actually use</h5>
+                    <h5>產生 AI 可直接使用的提示詞</h5>
                     <p class="text-muted mb-0">提示詞會告訴 AI 該呼叫哪些本機路由，以及如何為受保護的寫入給每個請求加上已命名用戶端標記。</p>
                 </div>
             </div>
@@ -295,28 +295,28 @@
                 <div class="step-card h-100">
                     <div class="risk-step-badge mb-3">3</div>
                     <h5>透過已命名的本機用戶端執行交易所寫入</h5>
-                    <p class="text-muted mb-0">Orders, close-all, and cancel-open-orders hit the local firewall instead of bypassing it with raw exchange credentials.</p>
+                    <p class="text-muted mb-0">下單、全部平倉和撤銷掛單都會先進入本地防火牆，而不是用原始交易所憑證繞過控制。</p>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
                 <div class="step-card h-100">
                     <div class="risk-step-badge mb-3">4</div>
-                    <h5>Block, forward, or freeze</h5>
-                    <p class="text-muted mb-0">Layer 1 can block before the exchange sees the request. Layer 2 can alert, cancel, flatten, or freeze after exposure appears.</p>
+                    <h5>攔截、放行或凍結</h5>
+                    <p class="text-muted mb-0">第一層可在交易所看到請求前先攔截。第二層可在風險敞口出現後告警、撤單、平倉或凍結。</p>
                 </div>
             </div>
         </div>
         <div class="row g-4">
             <div class="col-lg-6">
                 <div class="doc-note h-100">
-                    <h5 class="mb-3">What the AI gets</h5>
+                    <h5 class="mb-3">AI 取得什麼</h5>
                     <p class="text-muted mb-0">生成的提示詞會列出要呼叫的本機路由，以及執行器用來對受保護寫入施加風控策略的已命名用戶端標記。</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="doc-note h-100">
-                    <h5 class="mb-3">What the operator keeps</h5>
-                    <p class="text-muted mb-0">One-click rotation, revoke, freeze, account separation, and a clear audit trail for every protected write decision.</p>
+                    <h5 class="mb-3">操作員保留什麼</h5>
+                    <p class="text-muted mb-0">一鍵輪換、撤銷、凍結、帳戶隔離，以及每一次受保護寫入決策的清晰審計記錄。</p>
                 </div>
             </div>
         </div>
@@ -327,7 +327,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold">你的機器上會安裝哪些內容</h2>
-            <p class="lead text-muted section-lead">TradeArk is installed on the same machine where you trade. Setup downloads the program, creates local data files, and can enable automatic startup so your AI tool always connects to the same local service.</p>
+            <p class="lead text-muted section-lead">Signal 生成的提示詞會列出要呼叫的本機路由，以及執行器用來對受保護寫入施加風控策略的已命名用戶端標記。Horse 會安裝在你實際交易的那台機器上。安裝流程會下載程式、建立本地資料檔案，並可啟用自動啟動，讓你的 AI 工具始終連接到同一個本地服務。</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-xl-3">
@@ -335,7 +335,7 @@
                     <div class="feature-icon bg-gradient-warning">
                         <i class="bi bi-box-seam-fill"></i>
                     </div>
-                    <h4>TradeArk core program</h4>
+                    <h4>TradeArk 核心程式</h4>
                     <p class="text-muted">這是安裝在你電腦上的本地程式，提供交易頁面、本地連接以及交易操作。</p>
                 </div>
             </div>
@@ -354,7 +354,7 @@
                         <i class="bi bi-gear-fill"></i>
                     </div>
                     <h4>背景自動啟動</h4>
-                    <p class="text-muted">After installation, TradeArk can start automatically in the background, so you do not need to reopen it manually every time.</p>
+                    <p class="text-muted">安裝完成後，TradeArk 可以在背景自動啟動，你不必每次都手動重新打開。</p>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
@@ -387,9 +387,9 @@
                     </div>
                     <p class="text-muted mb-2">將 ZIP 解壓到任何使用者可寫目錄，然後運行本地啟動器：</p>
                     <div class="code-block mb-3">
-                        <pre class="mb-0 guide-code">1. Download and extract tradeark_windows_portable.zip
+                        <pre class="mb-0 guide-code">1. 下載並解壓 tradeark_windows_portable.zip
 2. 打開解壓後的資料夾
-3. Run Start TradeArk.cmd
+3. 運行 Start TradeArk.cmd
 4. Your browser opens the local UI and the first-run access wizard</pre>
                     </div>
                     <p class="text-muted mb-2">如果你更喜歡用腳本安裝到 LocalAppData，請使用這個 PowerShell 輔助腳本：</p>
@@ -409,13 +409,13 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                     <h4><i class="bi bi-apple text-warning me-2"></i>macOS</h4>
                     <p class="text-muted">Menu bar app that installs TradeArk locally and lets you open the trading page or restart the local service with one click. On first open you can leave the page public or protect it with a username and password.</p>
                     <div class="d-flex gap-2 flex-wrap mb-3">
-                        <a href="https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg" class="btn btn-warning"><i class="bi bi-download me-2"></i>Download TradeArk for macOS (.dmg)</a>
+                        <a href="https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg" class="btn btn-warning"><i class="bi bi-download me-2"></i>下載 TradeArk for macOS (.dmg)</a>
                         <a href="https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg" class="btn btn-outline-light"><i class="bi bi-download me-2"></i>下載 Intel DMG</a>
                         <span class="badge bg-secondary align-self-center">macOS 13+ · Apple Silicon / Intel</span>
                     </div>
                     <p class="text-muted mb-2">對大多數 macOS 桌面使用者來說，直接使用打包好的應用即可：</p>
                     <div class="code-block mb-3">
-                        <pre class="mb-0 guide-code">1. Download and open the TradeArk macOS package (.dmg)
+                        <pre class="mb-0 guide-code">1. 下載並打開 TradeArk macOS 安裝包 (.dmg)
 2. 將下載的應用拖入 /Applications
 3. 打開應用，然後使用選單列圖示在瀏覽器中打開本地介面
 4. 透過選單重啟本地服務，或開啟背景自動啟動</pre>
@@ -431,17 +431,17 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
             <div class="col-lg-6">
                 <div class="install-platform-card h-100">
                     <h4><i class="bi bi-ubuntu text-warning me-2"></i>Linux (Ubuntu / Debian)</h4>
-                    <p class="text-muted">Run one command and Linux will download TradeArk, install it the first time, or update the existing install in place later. On first open you can keep the page public or require a username and password every time:</p>
+                    <p class="text-muted">執行一條命令，Linux 會下載 TradeArk；首次執行會完成安裝，之後可原地更新既有安裝。第一次開啟時，你可以選擇保持頁面公開，或每次訪問都要求使用者名稱和密碼：</p>
                     <div class="code-block mb-3">
                         <pre class="mb-0 guide-code">curl -fsSL https://tradeark.ai/install.sh | bash -s -- --non-interactive --skip-credentials --install-service</pre>
                     </div>
-                    <p class="text-muted mb-2">When TradeArk is already installed, rerunning the same command keeps your local data, reuses the current Linux service settings when possible, and restarts the local service automatically.</p>
-                    <p class="text-muted mb-2">Once the Linux build itself reports a new version inside the local Web UI, clicking the top-right update prompt now runs the in-place Linux update automatically and shows progress until the local service comes back. Windows and macOS still open manual download/update links.</p>
-                    <p class="text-muted mb-2">After it finishes, confirm that TradeArk is running:</p>
+                    <p class="text-muted mb-2">當 TradeArk 已安裝時，再次執行同一命令會保留本地資料，盡可能復用目前 Linux 服務設定，並自動重啟本地服務。</p>
+                    <p class="text-muted mb-2">當 Linux 版本在本地 Web UI 中提示有新版本時，點擊右上角更新提示會自動執行原地更新，並顯示進度直到本地服務恢復。Windows 和 macOS 仍會開啟手動下載/更新連結。</p>
+                    <p class="text-muted mb-2">完成後，請確認 TradeArk 正在運行：</p>
                     <div class="code-block mb-3">
                         <pre class="mb-0 guide-code">curl http://127.0.0.1:38182/health</pre>
                     </div>
-                    <p class="text-muted mb-2">If you want to open the TradeArk page from another device, allow TCP port 38182 on the Linux firewall or security group, then visit:</p>
+                    <p class="text-muted mb-2">如果你想從另一台裝置打開 TradeArk 頁面，請先在 Linux 防火牆或安全組中放行 TCP 38182 連接埠，然後訪問：</p>
                     <div class="code-block mb-3">
                         <pre class="mb-0 guide-code">http://&lt;server-ip&gt;:38182/</pre>
                     </div>
@@ -472,13 +472,13 @@ POST http://127.0.0.1:38182/close-all</pre>
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold">建議的首次使用流程</h2>
-            <p class="lead text-muted section-lead">The easiest first run is: install TradeArk, add your exchange API keys, check balances and positions, then decide whether to use demo or live trading.</p>
+            <p class="lead text-muted section-lead">最簡單的首次使用流程是：先安裝 TradeArk，添加交易所 API 密鑰，檢查餘額和持倉，再決定使用 demo 還是真實交易。</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-xl-3">
                 <div class="step-card h-100">
                     <div class="step-number">1</div>
-                    <h5>Install TradeArk locally</h5>
+                    <h5>在本地安裝 TradeArk</h5>
                     <p class="text-muted">請安裝在運行 AI 工具或交易工作流程的同一台機器上。</p>
                 </div>
             </div>
@@ -510,7 +510,7 @@ POST http://127.0.0.1:38182/close-all</pre>
 <section id="api-reference" class="py-5 bg-dark-gradient">
     <div class="container">
         <div class="text-center">
-            <h2 class="display-6 fw-bold">TradeArk API Reference</h2>
+            <h2 class="display-6 fw-bold">TradeArk API 參考</h2>
             <p class="lead text-muted section-lead mt-3">完整 HTTP 參考（29 個端點）—— 包含請求/回應結構、參數和各交易所說明 —— 已放在獨立的文件頁面中。</p>
             <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
                 <a href="https://docs.tradeark.ai/" class="btn btn-warning btn-lg"><i class="bi bi-book me-2"></i>打開 API 文件</a>
@@ -549,26 +549,26 @@ POST http://127.0.0.1:38182/close-all</pre>
         <div class="row g-4">
             <div class="col-lg-6">
                 <div class="faq-card h-100">
-                    <h5>Will this install TradeArk on my computer?</h5>
-                    <p class="text-muted">Yes. The installer downloads TradeArk to your computer and can keep it running locally in the background for your AI tool or trading page.</p>
+                    <h5>這會把 TradeArk 安裝到我的電腦上嗎？</h5>
+                    <p class="text-muted">會。安裝程式會把 TradeArk 下載到你的電腦上，並可讓它在背景本地運行，供你的 AI 工具或交易頁面使用。</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="faq-card h-100">
                     <h5>我的交易所 API 密鑰會經過你們的伺服器嗎？</h5>
-                    <p class="text-muted">No. Your API keys stay on your own machine. TradeArk reads them locally and sends requests from your machine directly to the exchange.</p>
+                    <p class="text-muted">不會。你的 API 密鑰只保留在你自己的機器上。TradeArk 會在本地讀取它們，並由你的機器直接向交易所發出請求。</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="faq-card h-100">
-                    <h5>Which port does TradeArk use?</h5>
-                    <p class="text-muted">By default, TradeArk uses port 38182. On the same machine, open http://127.0.0.1:38182/ . If you want to access it from another Linux device, open that port in the firewall first.</p>
+                    <h5>TradeArk 使用哪個連接埠？</h5>
+                    <p class="text-muted">預設使用 38182 連接埠。在同一台機器上打開 http://127.0.0.1:38182/ 。如果要從另一台 Linux 裝置訪問，請先在防火牆中放行該連接埠。</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="faq-card h-100">
-                    <h5>Can I protect the local Web UI with a password?</h5>
-                    <p class="text-muted">Yes. The first time you open TradeArk, it can stay public or require a username and password for every visit. Later you can switch modes from Settings &gt; Web UI Access, or reset the password from the packaged binary with the web-ui set-password command.</p>
+                    <h5>可以用密碼保護本地 Web UI 嗎？</h5>
+                    <p class="text-muted">可以。第一次開啟 TradeArk 時，可以選擇保持公開，也可以要求每次訪問都輸入使用者名稱和密碼。之後可在「設定 &gt; Web UI 存取」中切換模式，或使用打包二進位裡的 web-ui set-password 命令重設密碼。</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -585,7 +585,7 @@ POST http://127.0.0.1:38182/close-all</pre>
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold">支援的軟體平台</h2>
-            <p class="lead text-muted section-lead">TradeArk can be connected from OpenClaw, Claude Code, Codex, Hermes Agents, and other agent platforms for one-stop access to multiple cryptocurrency exchanges and unified management.</p>
+            <p class="lead text-muted section-lead">TradeArk 可以從 OpenClaw、Claude Code、Codex、Hermes Agents 等智能體平台接入，一站式連接多個加密貨幣交易所並統一管理。</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-3">
@@ -594,7 +594,7 @@ POST http://127.0.0.1:38182/close-all</pre>
                         <img src="/static/img/platforms/openclaw.png" alt="OpenClaw" class="platform-logo-image platform-logo-image--openclaw">
                     </div>
                     <h5 class="mb-2">OpenClaw</h5>
-                    <p class="text-muted mb-0">Local agent workflows can call TradeArk for exchange access, order execution, and trading automation.</p>
+                    <p class="text-muted mb-0">本地智能體工作流程可以調用 TradeArk 完成交易所接入、訂單執行和交易自動化。</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -612,7 +612,7 @@ POST http://127.0.0.1:38182/close-all</pre>
                         <img src="/static/img/platforms/codex.svg" alt="Codex" class="platform-logo-image">
                     </div>
                     <h5 class="mb-2">Codex</h5>
-                    <p class="text-muted mb-0">Codex can use TradeArk as a local trading gateway for crypto research, order execution, and AI trading automation.</p>
+                    <p class="text-muted mb-0">Codex 可以把 TradeArk 用作本地交易網關，用於加密貨幣研究、訂單執行和 AI 交易自動化。</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -621,7 +621,7 @@ POST http://127.0.0.1:38182/close-all</pre>
                         <img src="/static/img/platforms/hermes-agents.svg" alt="Hermes Agents" class="platform-logo-image">
                     </div>
                     <h5 class="mb-2">Hermes Agents</h5>
-                    <p class="text-muted mb-0">Hermes Agents and other multi-agent runtimes can unify cryptocurrency exchange operations through TradeArk.</p>
+                    <p class="text-muted mb-0">Hermes Agents 和其他多智能體運行時也可以透過 TradeArk 統一處理加密貨幣交易所操作。</p>
                 </div>
             </div>
         </div>
@@ -638,13 +638,13 @@ POST http://127.0.0.1:38182/close-all</pre>
                         <img src="/static/img/tradeark_logo.png" alt="TradeArk" height="34">
                         <span>TradeArk</span>
                     </div>
-                    <p class="text-muted">Local AI trading execution, account scope, and risk-managed exchange access for modern operators.</p>
+                    <p class="text-muted">面向現代操作員的本地 AI 交易執行、帳戶範圍控制與風控化交易所存取。</p>
                 </div>
                 <div class="col-md-2 mb-4">
                     <h6>產品</h6>
                     <ul class="list-unstyled">
-                        <li><a href="/zh-hant/#product-ui" class="text-muted">Product UI</a></li>
-                        <li><a href="/zh-hant/#ai-risk-control-home" class="text-muted">Risk Control</a></li>
+                        <li><a href="/zh-hant/#product-ui" class="text-muted">產品介面</a></li>
+                        <li><a href="/zh-hant/#ai-risk-control-home" class="text-muted">風控</a></li>
                         <li><a href="/zh-hant/#install" class="text-muted">安裝</a></li>
                         <li><a href="/zh-hant/#flow" class="text-muted">首次使用</a></li>
                         <li><a href="/zh-hant/#faq" class="text-muted">常見問題</a></li>

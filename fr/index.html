@@ -161,8 +161,8 @@
             <div class="row align-items-center g-4 g-lg-5">
                 <div class="col-lg-5">
                     <span class="badge bg-warning text-dark mb-3 px-3 py-2">Live Product UI</span>
-                    <h2 class="display-6 fw-bold mb-3">See what TradeArk looks like before you install</h2>
-                    <p class="lead text-muted mb-4">TradeArk serves a local web interface at /. Traders and AI agents can watch charts, switch Binance, OKX, Bybit, Bitget, Gate, and other supported exchanges, inspect positions and balances, run AI automation, place manual orders, and manage batch trading from one unified screen.</p>
+                    <h2 class="display-6 fw-bold mb-3">D茅couvrez TradeArk avant de l&#39;installer</h2>
+                    <p class="lead text-muted mb-4">TradeArk fournit une interface web locale 脿 /. Traders et agents IA peuvent consulter les charts, changer de plateforme, v茅rifier positions et soldes, lancer l&#39;automatisation IA, passer des ordres manuels et g茅rer le trading par lots depuis un 茅cran unifi茅.</p>
                     <div class="ui-showcase-metrics">
                         <div class="ui-showcase-chip">
                             <i class="bi bi-graph-up-arrow"></i>
@@ -186,7 +186,7 @@
                     <div class="ui-showcase-frame">
                         <img
                             src="/static/img/tradeark-firewall-home.png"
-                            alt="TradeArk trading UI screenshot"
+                            alt="Capture d&#39;茅cran de l&#39;interface de trading TradeArk"
                             class="img-fluid ui-showcase-image"
                             loading="lazy"
                         >
@@ -327,7 +327,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold">Ce qui est install茅 sur votre machine</h2>
-            <p class="lead text-muted section-lead">TradeArk is installed on the same machine where you trade. Setup downloads the program, creates local data files, and can enable automatic startup so your AI tool always connects to the same local service.</p>
+            <p class="lead text-muted section-lead">TradeArk est install茅 sur la m锚me machine que celle sur laquelle vous tradez. L&#39;installation t茅l茅charge le programme, cr茅e des fichiers de donn茅es locaux et peut activer le d茅marrage automatique pour que votre outil IA se connecte toujours au m锚me service local.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-xl-3">
@@ -335,7 +335,7 @@
                     <div class="feature-icon bg-gradient-warning">
                         <i class="bi bi-box-seam-fill"></i>
                     </div>
-                    <h4>TradeArk core program</h4>
+                    <h4>Programme principal TradeArk</h4>
                     <p class="text-muted">C&#39;est le programme local install茅 sur votre ordinateur. Il fournit la page de trading, la connexion locale et les actions de trading.</p>
                 </div>
             </div>
@@ -354,7 +354,7 @@
                         <i class="bi bi-gear-fill"></i>
                     </div>
                     <h4>D茅marrage automatique en arri猫re-plan</h4>
-                    <p class="text-muted">After installation, TradeArk can start automatically in the background, so you do not need to reopen it manually every time.</p>
+                    <p class="text-muted">Apr猫s l&#39;installation, TradeArk peut d茅marrer automatiquement en arri猫re-plan, vous n&#39;avez plus besoin de le rouvrir manuellement 脿 chaque fois.</p>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
@@ -415,7 +415,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                     </div>
                     <p class="text-muted mb-2">Pour la plupart des utilisateurs macOS, utilisez l&#39;application packag茅e :</p>
                     <div class="code-block mb-3">
-                        <pre class="mb-0 guide-code">1. Download and open the TradeArk macOS package (.dmg)
+                        <pre class="mb-0 guide-code">1. T茅l茅charger et ouvrir le package macOS TradeArk (.dmg)
 2. Faire glisser l&#39;application t茅l茅charg茅e dans /Applications
 3. Ouvrir l&#39;application et utiliser l&#39;ic么ne de la barre de menus pour ouvrir l&#39;interface locale dans le navigateur
 4. Utiliser le menu pour red茅marrer le service local ou activer le d茅marrage en arri猫re-plan</pre>
@@ -437,11 +437,11 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                     </div>
                     <p class="text-muted mb-2">When TradeArk is already installed, rerunning the same command keeps your local data, reuses the current Linux service settings when possible, and restarts the local service automatically.</p>
                     <p class="text-muted mb-2">Once the Linux build itself reports a new version inside the local Web UI, clicking the top-right update prompt now runs the in-place Linux update automatically and shows progress until the local service comes back. Windows and macOS still open manual download/update links.</p>
-                    <p class="text-muted mb-2">After it finishes, confirm that TradeArk is running:</p>
+                    <p class="text-muted mb-2">Une fois termin茅, v茅rifiez que TradeArk fonctionne :</p>
                     <div class="code-block mb-3">
                         <pre class="mb-0 guide-code">curl http://127.0.0.1:38182/health</pre>
                     </div>
-                    <p class="text-muted mb-2">If you want to open the TradeArk page from another device, allow TCP port 38182 on the Linux firewall or security group, then visit:</p>
+                    <p class="text-muted mb-2">Pour acc茅der 脿 la page TradeArk depuis un autre appareil, autorisez le port TCP 38182 dans le pare-feu Linux ou le groupe de s茅curit茅, puis visitez :</p>
                     <div class="code-block mb-3">
                         <pre class="mb-0 guide-code">http://&lt;server-ip&gt;:38182/</pre>
                     </div>
@@ -472,13 +472,13 @@ POST http://127.0.0.1:38182/close-all</pre>
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold">Proc茅dure recommand茅e pour le premier d茅marrage</h2>
-            <p class="lead text-muted section-lead">The easiest first run is: install TradeArk, add your exchange API keys, check balances and positions, then decide whether to use demo or live trading.</p>
+            <p class="lead text-muted section-lead">Le premier d茅marrage le plus simple : installer TradeArk, ajouter vos cl茅s API de plateforme, v茅rifier les soldes et positions, puis d茅cider du mode demo ou live.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-xl-3">
                 <div class="step-card h-100">
                     <div class="step-number">1</div>
-                    <h5>Install TradeArk locally</h5>
+                    <h5>Installer TradeArk localement</h5>
                     <p class="text-muted">Installez-le sur la m锚me machine que celle sur laquelle s&#39;ex茅cute votre outil IA ou votre workflow de trading.</p>
                 </div>
             </div>
@@ -510,7 +510,7 @@ POST http://127.0.0.1:38182/close-all</pre>
 <section id="api-reference" class="py-5 bg-dark-gradient">
     <div class="container">
         <div class="text-center">
-            <h2 class="display-6 fw-bold">TradeArk API Reference</h2>
+            <h2 class="display-6 fw-bold">R茅f茅rence API TradeArk</h2>
             <p class="lead text-muted section-lead mt-3">Full HTTP reference (29 endpoints) — request/response schemas, parameters, and per-exchange notes — is on a dedicated docs page.</p>
             <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
                 <a href="https://docs.tradeark.ai/" class="btn btn-warning btn-lg"><i class="bi bi-book me-2"></i>Ouvrir la documentation API</a>
@@ -549,20 +549,20 @@ POST http://127.0.0.1:38182/close-all</pre>
         <div class="row g-4">
             <div class="col-lg-6">
                 <div class="faq-card h-100">
-                    <h5>Will this install TradeArk on my computer?</h5>
-                    <p class="text-muted">Yes. The installer downloads TradeArk to your computer and can keep it running locally in the background for your AI tool or trading page.</p>
+                    <h5>Cela installe-t-il TradeArk sur mon ordinateur ?</h5>
+                    <p class="text-muted">Oui. L&#39;installateur t茅l茅charge TradeArk sur votre ordinateur et peut le maintenir en cours d&#39;ex茅cution localement en arri猫re-plan pour votre outil IA ou page de trading.</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="faq-card h-100">
                     <h5>Mes cl茅s API d&#39;exchange passent-elles par votre serveur?</h5>
-                    <p class="text-muted">No. Your API keys stay on your own machine. TradeArk reads them locally and sends requests from your machine directly to the exchange.</p>
+                    <p class="text-muted">Non. Vos cl茅s API restent sur votre propre machine. TradeArk les lit localement et envoie les requ锚tes directement 脿 la plateforme.</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="faq-card h-100">
                     <h5>Which port does TradeArk use?</h5>
-                    <p class="text-muted">By default, TradeArk uses port 38182. On the same machine, open http://127.0.0.1:38182/ . If you want to access it from another Linux device, open that port in the firewall first.</p>
+                    <p class="text-muted">Par d茅faut, TradeArk utilise le port 38182. Sur la m锚me machine, ouvrez http://127.0.0.1:38182/ . Pour y acc茅der depuis un autre appareil Linux, ouvrez d&#39;abord ce port dans le pare-feu.</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -585,7 +585,7 @@ POST http://127.0.0.1:38182/close-all</pre>
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold">Supported software platforms</h2>
-            <p class="lead text-muted section-lead">TradeArk can be connected from OpenClaw, Claude Code, Codex, Hermes Agents, and other agent platforms for one-stop access to multiple cryptocurrency exchanges and unified management.</p>
+            <p class="lead text-muted section-lead">TradeArk peut 锚tre connect茅 depuis OpenClaw, Claude Code, Codex, Hermes Agents et d&#39;autres plateformes d&#39;agents pour un acc猫s centralis茅 脿 plusieurs cryptoplateformes et une gestion unifi茅e.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-3">
@@ -594,7 +594,7 @@ POST http://127.0.0.1:38182/close-all</pre>
                         <img src="/static/img/platforms/openclaw.png" alt="OpenClaw" class="platform-logo-image platform-logo-image--openclaw">
                     </div>
                     <h5 class="mb-2">OpenClaw</h5>
-                    <p class="text-muted mb-0">Local agent workflows can call TradeArk for exchange access, order execution, and trading automation.</p>
+                    <p class="text-muted mb-0">Les workflows d&#39;agents locaux peuvent appeler TradeArk pour l&#39;acc猫s aux plateformes, l&#39;ex茅cution des ordres et l&#39;automatisation du trading.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -612,7 +612,7 @@ POST http://127.0.0.1:38182/close-all</pre>
                         <img src="/static/img/platforms/codex.svg" alt="Codex" class="platform-logo-image">
                     </div>
                     <h5 class="mb-2">Codex</h5>
-                    <p class="text-muted mb-0">Codex can use TradeArk as a local trading gateway for crypto research, order execution, and AI trading automation.</p>
+                    <p class="text-muted mb-0">Codex peut utiliser TradeArk comme passerelle de trading locale pour la recherche crypto, l&#39;ex茅cution des ordres et l&#39;automatisation du trading IA.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -621,7 +621,7 @@ POST http://127.0.0.1:38182/close-all</pre>
                         <img src="/static/img/platforms/hermes-agents.svg" alt="Hermes Agents" class="platform-logo-image">
                     </div>
                     <h5 class="mb-2">Hermes Agents</h5>
-                    <p class="text-muted mb-0">Hermes Agents and other multi-agent runtimes can unify cryptocurrency exchange operations through TradeArk.</p>
+                    <p class="text-muted mb-0">Hermes Agents et autres runtimes multi-agents peuvent unifier les op茅rations sur les cryptomonnaies via TradeArk.</p>
                 </div>
             </div>
         </div>
