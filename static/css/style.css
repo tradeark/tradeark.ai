@@ -206,7 +206,7 @@ h6 {
     background:
         linear-gradient(90deg, rgba(3, 7, 11, 0.96) 0%, rgba(3, 7, 11, 0.82) 38%, rgba(3, 7, 11, 0.38) 72%, rgba(3, 7, 11, 0.82) 100%),
         linear-gradient(180deg, rgba(3, 7, 11, 0.34), rgba(3, 7, 11, 0.92)),
-        url("/static/img/signal-executor-ui-demo.png") center right / min(980px, 78vw) auto no-repeat;
+        url("/static/img/tradeark-main-ui-home.png") center right / min(980px, 78vw) auto no-repeat;
     pointer-events: none;
 }
 
@@ -917,7 +917,7 @@ code {
     .hero-screen {
         background:
             linear-gradient(180deg, rgba(3, 7, 11, 0.86) 0%, rgba(3, 7, 11, 0.72) 45%, rgba(3, 7, 11, 0.96) 100%),
-            url("/static/img/signal-executor-ui-demo.png") center top 92px / 720px auto no-repeat;
+            url("/static/img/tradeark-main-ui-home.png") center top 92px / 720px auto no-repeat;
     }
 
     .navbar > .container,
