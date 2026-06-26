@@ -20,7 +20,7 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="/static/css/style.css?v=20260626-ops" rel="stylesheet">
     
@@ -104,107 +104,52 @@
     <!-- Main Content -->
     <main>
 <section class="hero-section trade-ops-hero">
-    <div class="container">
-        <div class="row align-items-center g-4 g-xl-5">
-            <div class="col-lg-5">
-                <span class="eyebrow">Executor locale / AI Risk Control</span>
-                <h1 class="display-4 fw-bold mb-4">
-                    <span class="hero-title-line">Operate AI trading</span>
-                    <span class="hero-title-line">from a local control room</span>
-                </h1>
-                <p class="lead text-muted mb-4">TradeArk gives operators and AI agents a local trading workspace for Binance, OKX, Bybit, Bitget, Gate, and other supported exchanges. AI can read charts, balances, positions, and settings on one machine, while protected exchange writes pass through named local clients, pre-trade policy checks, and live watchdogs.</p>
-                <div class="hero-actions">
-                    <a href="#install" class="btn btn-warning btn-lg px-4">
-                        <i class="bi bi-download me-2"></i>Dettagli installazione
-                    </a>
-                    <a href="#product-ui" class="btn btn-outline-dark btn-lg px-4">
-                        <i class="bi bi-window-stack me-2"></i>View Product UI
-                    </a>
-                </div>
-                <div class="hero-proof-grid mt-4">
-                    <div>
-                        <strong>38182</strong>
-                        <span>Local API port</span>
-                    </div>
-                    <div>
-                        <strong>29</strong>
-                        <span>HTTP endpoints</span>
-                    </div>
-                    <div>
-                        <strong>Local</strong>
-                        <span>Keys stay on your machine</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="bulletin-board" aria-label="TradeArk market bulletin preview">
-                    <div class="bulletin-ribbon">
-                        <span>Operator Brief</span>
-                        <strong>Local only</strong>
-                    </div>
-                    <div class="bulletin-layout">
-                        <div class="bulletin-lead">
-                            <span class="bulletin-kicker">Today&#39;s route</span>
-                            <h3>AI reads local context. TradeArk approves exchange writes.</h3>
-                            <p>Named clients, policy checks, and watchdogs sit between the agent and the exchange.</p>
-                        </div>
-                        <div class="bulletin-tape bulletin-tape-up">
-                            <span>BTC/USDT</span>
-                            <strong>$64,820.40</strong>
-                            <small>+2.18%</small>
-                        </div>
-                        <div class="bulletin-note">
-                            <span>Client</span>
-                            <strong>codex-strategy-01</strong>
-                            <small>Saved-account scope enabled</small>
-                        </div>
-                        <div class="bulletin-note">
-                            <span>Route</span>
-                            <strong>/place-order</strong>
-                            <small>Protected write path</small>
-                        </div>
-                        <div class="bulletin-tape bulletin-tape-pass">
-                            <span>Policy gate</span>
-                            <strong>Pass</strong>
-                            <small>symbol · leverage · notional</small>
-                        </div>
-                        <div class="bulletin-log">
-                            <span>12:04:18 token verified</span>
-                            <span>12:04:19 limits checked</span>
-                            <span>12:04:20 watchdog armed</span>
-                            <span>12:04:21 exchange write forwarded</span>
-                        </div>
-                    </div>
-                </div>
+    <div class="hero-screen" aria-hidden="true"></div>
+    <div class="hero-scanline" aria-hidden="true"></div>
+    <div class="container hero-command-layout">
+        <div class="hero-copy">
+            <span class="eyebrow">TradeArk Local Command</span>
+            <h1 class="display-4 fw-bold mb-4">
+                <span class="hero-title-line">TradeArk</span>
+                <span class="hero-title-line">AI trading, routed through your machine</span>
+            </h1>
+            <p class="lead mb-4">Run AI agents against a local trading screen and HTTP API. Read charts, balances, positions, and settings locally, then let protected exchange writes pass through named clients, policy gates, and live watchdogs before anything reaches Binance, OKX, Bybit, Bitget, Gate, or other supported exchanges.</p>
+            <div class="hero-actions">
+                <a href="#install" class="btn btn-warning btn-lg px-4">
+                    <i class="bi bi-download me-2"></i>Dettagli installazione
+                </a>
+                <a href="#product-ui" class="btn btn-outline-dark btn-lg px-4">
+                    <i class="bi bi-window-stack me-2"></i>View Product UI
+                </a>
             </div>
         </div>
-        <div class="hero-highlights-row row g-3 mt-4">
-            <div class="col-md-4">
-                <div class="hero-highlight">
-                    <i class="bi bi-key-fill"></i>
-                    <div>
-                        <h5>Named local clients instead of raw exchange keys</h5>
-                        <p class="text-muted">Give each AI workflow its own scoped local client, then rotate or revoke it from the Web UI.</p>
-                    </div>
-                </div>
+        <div class="hero-hud" aria-label="TradeArk live status preview">
+            <div class="hud-row">
+                <span>LOCAL NODE</span>
+                <strong>127.0.0.1:38182</strong>
             </div>
-            <div class="col-md-4">
-                <div class="hero-highlight">
-                    <i class="bi bi-sliders2-vertical"></i>
-                    <div>
-                        <h5>Pre-trade policy checks</h5>
-                        <p class="text-muted">Apply route, symbol, leverage, quantity, notional, and rate limits before orders leave the machine.</p>
-                    </div>
-                </div>
+            <div class="hud-row">
+                <span>RISK ENGINE</span>
+                <strong>ARMED</strong>
             </div>
-            <div class="col-md-4">
-                <div class="hero-highlight">
-                    <i class="bi bi-activity"></i>
-                    <div>
-                        <h5>Live watchdogs for exposure</h5>
-                        <p class="text-muted">Monitor positions and balances locally, with freeze and flatten actions ready when limits are hit.</p>
-                    </div>
-                </div>
+            <div class="hud-row hud-row-market">
+                <span>BTC/USDT</span>
+                <strong>$64,820.40</strong>
+                <em>+2.18%</em>
+            </div>
+        </div>
+        <div class="hero-command-strip">
+            <div>
+                <strong>29</strong>
+                <span>HTTP endpoints</span>
+            </div>
+            <div>
+                <strong>Local</strong>
+                <span>Keys stay on this machine</span>
+            </div>
+            <div>
+                <strong>Policy</strong>
+                <span>Symbol, leverage, notional, route</span>
             </div>
         </div>
     </div>
