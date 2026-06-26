@@ -1,17 +1,17 @@
 ﻿﻿<!DOCTYPE html>
-<html lang="de" data-bs-theme="dark">
+<html lang="de" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradeArk - Lokales Agenten-Trading-Setup</title>
-    <meta name="description" content="TradeArk is a high-performance platform for automated crypto trading signal execution and order routing.">
+    <meta name="description" content="TradeArk is a local trading control room for AI agents, exchange execution, and risk-managed order routing.">
     <meta property="og:title" content="TradeArk">
-    <meta property="og:description" content="Automate trading signal execution across exchanges with speed, security, and control.">
+    <meta property="og:description" content="Run AI trading through a local executor with account scope, policy checks, and operator control.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tradeark.ai/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="TradeArk">
-    <meta name="twitter:description" content="Automate trading signal execution across exchanges with speed, security, and control.">
+    <meta name="twitter:description" content="Run AI trading through a local executor with account scope, policy checks, and operator control.">
     <link rel="canonical" href="https://tradeark.ai/">
     <link rel="icon" type="image/png" href="/static/img/tradeark_logo.png">
     
@@ -22,12 +22,12 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="/static/css/style.css?v=20260421-1" rel="stylesheet">
+    <link href="/static/css/style.css?v=20260626-ops" rel="stylesheet">
     
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="/de/">
                 <img src="/static/img/tradeark_logo.png" alt="TradeArk" height="36" class="me-2">
@@ -41,7 +41,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="/de/#overview">脺bersicht</a>
+                        <a class="nav-link" href="/de/#product-ui">Produkt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/de/#ai-risk-control-home">Risk Control</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/de/#install">Installation</a>
@@ -50,10 +53,12 @@
                         <a class="nav-link" href="/de/#flow">Erster Start</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/de/#faq">FAQ</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="https://docs.tradeark.ai/">API-Dokumentation</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-sm btn-warning nav-cta" href="/de/#install">
+                            <i class="bi bi-download me-1"></i>Install
+                        </a>
                     </li>
                     
                     <!-- Language Dropdown -->
@@ -98,77 +103,111 @@
 
     <!-- Main Content -->
     <main>
-<section class="hero-section skill-guide-hero">
-    <div class="hero-bg"></div>
+<section class="hero-section trade-ops-hero">
     <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-                <span class="badge bg-warning text-dark mb-3 px-3 py-2">Agent-Integration · Lokaler Executor</span>
-                <div class="hero-risk-strip mb-4">
-                    <span class="hero-risk-pill">Built-in AI Risk Control</span>
-                    <span class="hero-risk-pill">Named local clients instead of raw exchange keys</span>
-                </div>
-                <h1 class="display-4 fw-bold mb-4">Run AI trading locally with a built-in risk firewall</h1>
-                <p class="lead text-muted mb-4">TradeArk is a local trading workspace and HTTP API for AI agents and operators. It lets you connect Binance, OKX, Bybit, Bitget, Gate, and other supported exchanges in one click for AI automated trading, manual trading, and batch execution across multiple accounts. AI can read charts, balances, positions, and settings on one machine, while protected exchange writes pass through AI Risk Control with a named local client, pre-trade policy checks, and live watchdogs. OpenClaw is one supported client, but the flow is not limited to OpenClaw.</p>
-                <div class="d-flex gap-3 flex-wrap mb-4">
+        <div class="row align-items-center g-4 g-xl-5">
+            <div class="col-lg-5">
+                <span class="eyebrow">Lokaler Executor / AI Risk Control</span>
+                <h1 class="display-4 fw-bold mb-4">
+                    <span class="hero-title-line">Operate AI trading</span>
+                    <span class="hero-title-line">from a local control room</span>
+                </h1>
+                <p class="lead text-muted mb-4">TradeArk gives operators and AI agents a local trading workspace for Binance, OKX, Bybit, Bitget, Gate, and other supported exchanges. AI can read charts, balances, positions, and settings on one machine, while protected exchange writes pass through named local clients, pre-trade policy checks, and live watchdogs.</p>
+                <div class="hero-actions">
                     <a href="#install" class="btn btn-warning btn-lg px-4">
                         <i class="bi bi-download me-2"></i>Installationsdetails
                     </a>
-                    <a href="#api-reference" class="btn btn-outline-warning btn-lg px-4">
-                        <i class="bi bi-journal-code me-2"></i>API-Referenz
+                    <a href="#product-ui" class="btn btn-outline-dark btn-lg px-4">
+                        <i class="bi bi-window-stack me-2"></i>View Product UI
                     </a>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="hero-terminal">
-                    <div class="code-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="ms-2 text-muted">agent-bootstrap.sh</span>
+                <div class="hero-proof-grid mt-4">
+                    <div>
+                        <strong>38182</strong>
+                        <span>Local API port</span>
                     </div>
-                                        <pre class="code-content mb-0"><code><span class="terminal-comment"># Ersteinrichtung auf dem Handelsrechner</span>
-<span class="terminal-prompt">$</span> curl -fsSL https://tradeark.ai/install.sh | bash -s -- --non-interactive --skip-credentials --install-service
-
-<span class="terminal-comment"># Check that TradeArk is running normally</span>
-<span class="terminal-prompt">$</span> curl -fsS http://127.0.0.1:38182/health
-
-<span class="terminal-comment"># Firewall 枚ffnen und von einem anderen Ger盲t aufrufen</span>
-<span class="terminal-prompt">$</span> 脰ffnen Sie in Ihrem Browser: http://&lt;server-ip&gt;:38182/</code></pre>
+                    <div>
+                        <strong>29</strong>
+                        <span>HTTP endpoints</span>
+                    </div>
+                    <div>
+                        <strong>Local</strong>
+                        <span>Keys stay on your machine</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="ops-console" aria-label="TradeArk local control room preview">
+                    <div class="ops-console-topbar">
+                        <div>
+                            <span class="ops-dot ops-dot-live"></span>
+                            <span class="ops-console-title">TradeArk local node</span>
+                        </div>
+                        <span class="ops-console-status">Risk engine online</span>
+                    </div>
+                    <div class="ops-console-grid">
+                        <div class="ops-panel ops-panel-market">
+                            <span class="ops-label">BTC/USDT</span>
+                            <strong>$64,820.40</strong>
+                            <small class="text-success">+2.18% · live context</small>
+                        </div>
+                        <div class="ops-panel">
+                            <span class="ops-label">AI client</span>
+                            <strong>codex-strategy-01</strong>
+                            <small>Scoped to saved accounts</small>
+                        </div>
+                        <div class="ops-panel ops-panel-wide">
+                            <div class="ops-row">
+                                <span>Pre-trade policy</span>
+                                <strong class="text-success">Pass</strong>
+                            </div>
+                            <div class="ops-meter"><span style="width: 72%"></span></div>
+                            <small>Symbol allowlist, leverage ceiling, notional limit, and route scope checked locally.</small>
+                        </div>
+                        <div class="ops-panel">
+                            <span class="ops-label">Order route</span>
+                            <strong>/place-order</strong>
+                            <small>Protected write</small>
+                        </div>
+                        <div class="ops-panel">
+                            <span class="ops-label">Watchdog</span>
+                            <strong>Armed</strong>
+                            <small>Cancel, flatten, or freeze thresholds</small>
+                        </div>
+                        <div class="ops-log ops-panel-wide">
+                            <span>12:04:18 client token verified</span>
+                            <span>12:04:19 notional limit checked</span>
+                            <span>12:04:20 exchange write forwarded</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="hero-highlights-row row justify-content-center g-3 g-xl-4 mt-4">
-            <div class="col-md-6 col-lg-4 d-flex">
+        <div class="hero-highlights-row row g-3 mt-4">
+            <div class="col-md-4">
                 <div class="hero-highlight">
-                    <div class="hero-highlight-icon hero-highlight-icon--key" aria-hidden="true">
-                        <i class="bi bi-key-fill"></i>
-                    </div>
-                    <div class="hero-highlight-body">
-                        <h5>Schneller KI-Handelszugang</h5>
-                        <p class="text-muted">OpenClaw, Claude Code, Codex und 盲hnliche Tools schnell f眉r den KI-gest眉tzten Kryptohandel verbinden.</p>
+                    <i class="bi bi-key-fill"></i>
+                    <div>
+                        <h5>Named local clients instead of raw exchange keys</h5>
+                        <p class="text-muted">Give each AI workflow its own scoped local client, then rotate or revoke it from the Web UI.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 d-flex">
+            <div class="col-md-4">
                 <div class="hero-highlight">
-                    <div class="hero-highlight-icon hero-highlight-icon--install" aria-hidden="true">
-                        <i class="bi bi-arrow-down-circle-fill"></i>
-                    </div>
-                    <div class="hero-highlight-body">
-                        <h5>Quick local setup</h5>
-                        <p class="text-muted">Download the local package, extract it into your own folder, and open TradeArk in your browser on this machine.</p>
+                    <i class="bi bi-sliders2-vertical"></i>
+                    <div>
+                        <h5>Pre-trade policy checks</h5>
+                        <p class="text-muted">Apply route, symbol, leverage, quantity, notional, and rate limits before orders leave the machine.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 d-flex">
+            <div class="col-md-4">
                 <div class="hero-highlight">
-                    <div class="hero-highlight-icon hero-highlight-icon--automation" aria-hidden="true">
-                        <i class="bi bi-diagram-3-fill"></i>
-                    </div>
-                    <div class="hero-highlight-body">
-                        <h5>KI-Automatisierung + Batch-Trading</h5>
-                        <p class="text-muted">Ein-Klick-B枚rsenzugang unterst眉tzt automatisierten KI-Handel, manuellen Handel und Batch-Trading 眉ber mehrere Konten in einem Arbeitsbereich.</p>
+                    <i class="bi bi-activity"></i>
+                    <div>
+                        <h5>Live watchdogs for exposure</h5>
+                        <p class="text-muted">Monitor positions and balances locally, with freeze and flatten actions ready when limits are hit.</p>
                     </div>
                 </div>
             </div>
@@ -651,17 +690,21 @@ POST http://127.0.0.1:38182/close-all</pre>
     </main>
 
     <!-- Footer -->
-    <footer class="footer py-5 mt-5">
+    <footer class="footer py-5">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-md-4 mb-4">
-                    <h5 class="text-warning"><span aria-hidden="true">??</span> TradeArk</h5>
-                    <p class="text-muted">TradeArk delivers professional cryptocurrency trading signal automation for modern traders.</p>
+                    <div class="footer-brand mb-3">
+                        <img src="/static/img/tradeark_logo.png" alt="TradeArk" height="34">
+                        <span>TradeArk</span>
+                    </div>
+                    <p class="text-muted">Local AI trading execution, account scope, and risk-managed exchange access for modern operators.</p>
                 </div>
                 <div class="col-md-2 mb-4">
                     <h6>Produkt</h6>
                     <ul class="list-unstyled">
-                        <li><a href="/de/#overview" class="text-muted">脺bersicht</a></li>
+                        <li><a href="/de/#product-ui" class="text-muted">Product UI</a></li>
+                        <li><a href="/de/#ai-risk-control-home" class="text-muted">Risk Control</a></li>
                         <li><a href="/de/#install" class="text-muted">Installation</a></li>
                         <li><a href="/de/#flow" class="text-muted">Erster Start</a></li>
                         <li><a href="/de/#faq" class="text-muted">FAQ</a></li>
@@ -679,11 +722,11 @@ POST http://127.0.0.1:38182/close-all</pre>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h6>Unterst眉tzte Plattformen</h6>
-                    <div class="d-flex gap-3 mt-3">
-                        <span class="badge bg-secondary"><i class="bi bi-ubuntu"></i> Ubuntu</span>
-                        <span class="badge bg-secondary"><i class="bi bi-ubuntu"></i> Debian</span>
-                        <span class="badge bg-secondary"><i class="bi bi-apple"></i> macOS</span>
-                        <span class="badge bg-secondary"><i class="bi bi-windows"></i> Windows</span>
+                    <div class="footer-platforms">
+                        <span><i class="bi bi-ubuntu"></i> Ubuntu</span>
+                        <span><i class="bi bi-ubuntu"></i> Debian</span>
+                        <span><i class="bi bi-apple"></i> macOS</span>
+                        <span><i class="bi bi-windows"></i> Windows</span>
                     </div>
                 </div>
             </div>
@@ -697,7 +740,7 @@ POST http://127.0.0.1:38182/close-all</pre>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS (cache busted) -->
-    <script src="/static/js/main.js?v=20260421-1"></script>
+    <script src="/static/js/main.js?v=20260626-ops"></script>
     
 </body>
 </html>
