@@ -1,0 +1,81 @@
+﻿{
+  "version": "1.0.166.6954",
+  "baseVersion": "1.0.0",
+  "displayVersion": "1.0.0+20260615.074339Z",
+  "publishedAtUtc": "2026-06-15T07:43:39.5532566Z",
+  "publicBaseUrl": "https://tradeark.ai",
+  "downloadBaseUrl": "https://tradeark.ai/releases/latest",
+  "versionApiUrl": "https://tradeark.ai/api/releases/latest",
+  "installerFilename": "tradeark_windows_portable.zip",
+  "installerSize": 5964988,
+  "installerSha256": "fb391777f065a74511da1caa198ecc555268eaa722f32a6715d908b33a00050e",
+  "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
+  "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
+  "backendFilename": "TRADEARK_windows_amd64.exe",
+  "backendSize": 16108544,
+  "backendSha256": "822da7e0eb0cd2be7fa1d40fc929b61ee95d84a80fb002b8de8bc88985ebfe18",
+  "backendUrl": "https://tradeark.ai/releases/latest/TRADEARK_windows_amd64.exe",
+  "windowsBackendUrl": "https://tradeark.ai/releases/latest/TRADEARK_windows_amd64.exe",
+  "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while Windows stays on a manual portable download refresh flow.",
+  "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/TRADEARK_linux_amd64",
+  "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_arm64",
+  "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_arm64.dmg",
+  "macosArm64AppZipUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_arm64_app.zip",
+  "macosAmd64BinaryUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_amd64",
+  "macosAmd64DmgUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_amd64.dmg",
+  "macosAmd64AppZipUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_amd64_app.zip",
+  "platforms": {
+    "windows": {
+      "installerFilename": "tradeark_windows_portable.zip",
+      "installerSize": 5964988,
+      "installerSha256": "fb391777f065a74511da1caa198ecc555268eaa722f32a6715d908b33a00050e",
+      "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
+      "backendFilename": "TRADEARK_windows_amd64.exe",
+      "backendSize": 16108544,
+      "backendSha256": "822da7e0eb0cd2be7fa1d40fc929b61ee95d84a80fb002b8de8bc88985ebfe18",
+      "backendUrl": "https://tradeark.ai/releases/latest/TRADEARK_windows_amd64.exe",
+      "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while Windows stays on a manual portable download refresh flow."
+    },
+    "linux": {
+      "amd64": {
+        "binaryFilename": "TRADEARK_linux_amd64",
+        "binarySize": 19746728,
+        "binarySha256": "bdf0fdfadf41bf79e5afecabd173c130ee75890b6cee439bc60cc27d66df97fc",
+        "binaryUrl": "https://tradeark.ai/releases/latest/TRADEARK_linux_amd64",
+        "releaseNotes": "The local UI update prompt now runs the Linux in-place updater automatically and shows progress until the local service restarts."
+      }
+    },
+    "macos": {
+      "arm64": {
+        "binaryFilename": "TRADEARK_darwin_arm64",
+        "binarySize": 11051344,
+        "binarySha256": "b2717a24fc89af03a152fa83e7290f515eaaaeca21b2814d29be34e54aea6986",
+        "binaryUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_arm64",
+        "dmgFilename": "TRADEARK_darwin_arm64.dmg",
+        "dmgSize": 6385167,
+        "dmgSha256": "04665bb6439b507f9fddd29045808d63d19c99326544f37477624ed2bf044f84",
+        "dmgUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_arm64.dmg",
+        "appZipFilename": "TRADEARK_darwin_arm64_app.zip",
+        "appZipSize": 5822252,
+        "appZipSha256": "92c12cddc76f668f9206a5879609f2b2dc3f596eb4a842211487b1f1aa42c22d",
+        "appZipUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_arm64_app.zip",
+        "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while macOS continues to use manual download and install refreshes."
+      },
+      "amd64": {
+        "binaryFilename": "TRADEARK_darwin_amd64",
+        "binarySize": 12076004,
+        "binarySha256": "74191bc26e4d82f58c2ff8d35bf8c87d61617943216a94771c3c28b09ea7e78d",
+        "binaryUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_amd64",
+        "dmgFilename": "TRADEARK_darwin_amd64.dmg",
+        "dmgSize": 6970940,
+        "dmgSha256": "de6a5a33ad077fd37b40e927329e57a26b674a3d624297b06f4dc7d54ed80143",
+        "dmgUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_amd64.dmg",
+        "appZipFilename": "TRADEARK_darwin_amd64_app.zip",
+        "appZipSize": 6256988,
+        "appZipSha256": "47737cc8f25a3f1a569494ec4fcecdc59336cd342c363ff5072dce89deb1cf71",
+        "appZipUrl": "https://tradeark.ai/releases/latest/TRADEARK_darwin_amd64_app.zip",
+        "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while macOS continues to use manual download and install refreshes."
+      }
+    }
+  }
+}
