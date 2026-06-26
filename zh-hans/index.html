@@ -1,351 +1,703 @@
 ﻿﻿<!DOCTYPE html>
-<html lang="zh_Hans" data-bs-theme="light">
+<html lang="zh_Hans" data-bs-theme="dark">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="TradeArk - Local-first cryptocurrency trading platform with AI automation, risk firewall, and multi-exchange support.">
-    <meta property="og:title" content="TradeArk - Local AI Trading Platform">
-    <meta property="og:description" content="Navigate crypto markets safely with local-first AI trading. Multi-exchange support, risk controls, and automated trading.">
-    <meta property="og:url" content="https://tradeark.ai">
-    <link rel="icon" type="image/png" href="/static/img/logo_tr.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeArk - 本地智能体交易设置</title>
+    <meta name="description" content="TradeArk is a high-performance platform for automated crypto trading signal execution and order routing.">
+    <meta property="og:title" content="TradeArk">
+    <meta property="og:description" content="Automate trading signal execution across exchanges with speed, security, and control.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tradeark.ai/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TradeArk">
+    <meta name="twitter:description" content="Automate trading signal execution across exchanges with speed, security, and control.">
     <link rel="canonical" href="https://tradeark.ai/">
+    <link rel="icon" type="image/png" href="/static/img/tradeark_logo.png">
+    
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="/static/css/style.css?v=20260626-2" rel="stylesheet">
-    <title>TradeArk - Local AI Trading Platform</title>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/css/style.css?v=20260421-1" rel="stylesheet">
+    
 </head>
 <body>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/zh-hans/">
-                <img src="/static/img/logo_tr.png" alt="TradeArk">
-                <span>TradeArk</span>
+            <a class="navbar-brand d-flex align-items-center" href="/zh-hans/">
+                <img src="/static/img/tradeark_logo.png" alt="TradeArk" height="36" class="me-2">
+                <span class="fw-bold">TradeArk</span>
             </a>
-            <ul class="navbar-nav">
-                <li><a class="nav-link" href="#overview">Overview</a></li>
-                <li><a class="nav-link" href="#features">Features</a></li>
-                <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
-                <li><a class="nav-link" href="#install">Install</a></li>
-                <li><a class="nav-link" href="#faq">FAQ</a></li>
-            </ul>
-            <div class="navbar-actions">
-                <a href="https://docs.tradeark.ai/" class="btn btn-secondary">API Docs</a>
-                <a href="#install" class="btn btn-primary">Get Started</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/zh-hans/#overview">概览</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/zh-hans/#install">安装</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/zh-hans/#flow">首次使用</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/zh-hans/#faq">常见问题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://docs.tradeark.ai/">API 文档</a>
+                    </li>
+                    
+                    <!-- Language Dropdown -->
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-globe2"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="/">English</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item active" href="/zh-hans/">简体中文</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/zh-hant/">繁體中文</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/de/">Deutsch</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/fr/">Français</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/it/">Italiano</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/ja/">日本語</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/es/">Español</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pt/">Português</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-<!-- Hero Section -->
-<section class="hero">
+<section class="hero-section skill-guide-hero">
+    <div class="hero-bg"></div>
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-badge">Local-First AI Trading Platform</div>
-                <h1>Navigate Crypto Markets<br>With Your Trading Vessel</h1>
-                <p class="hero-subtitle">TradeArk is a local trading platform that puts you at the helm. Connect multiple exchanges, run AI-powered strategies, and keep your keys safely on your own machine -- no cloud, no middlemen.</p>
-                <div class="hero-actions">
-                    <a href="#install" class="btn btn-primary btn-lg"><i class="bi bi-download"></i> Install Now</a>
-                    <a href="#features" class="btn btn-outline btn-lg"><i class="bi bi-compass"></i> Explore Features</a>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge bg-warning text-dark mb-3 px-3 py-2">代理集成 · 本地执行器</span>
+                <div class="hero-risk-strip mb-4">
+                    <span class="hero-risk-pill">Built-in AI Risk Control</span>
+                    <span class="hero-risk-pill">用已命名的本地客户端代替原始交易所密钥</span>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-value">5+</div>
-                        <div class="stat-label">Exchanges Supported</div>
+                <h1 class="display-4 fw-bold mb-4">Run AI trading locally with a built-in risk firewall</h1>
+                <p class="lead text-muted mb-4">TradeArk is a local trading workspace and HTTP API for AI agents and operators. It lets you connect Binance, OKX, Bybit, Bitget, Gate, and other supported exchanges in one click for AI automated trading, manual trading, and batch execution across multiple accounts. AI can read charts, balances, positions, and settings on one machine, while protected exchange writes pass through AI Risk Control with a named local client, pre-trade policy checks, and live watchdogs. OpenClaw is one supported client, but the flow is not limited to OpenClaw.</p>
+                <div class="d-flex gap-3 flex-wrap mb-4">
+                    <a href="#install" class="btn btn-warning btn-lg px-4">
+                        <i class="bi bi-download me-2"></i>安装详情
+                    </a>
+                    <a href="#api-reference" class="btn btn-outline-warning btn-lg px-4">
+                        <i class="bi bi-journal-code me-2"></i>API 参考
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-terminal">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="ms-2 text-muted">agent-bootstrap.sh</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">Local Key Storage</div>
+                                        <pre class="code-content mb-0"><code><span class="terminal-comment"># 在将要执行交易的机器上完成首次设置</span>
+<span class="terminal-prompt">$</span> curl -fsSL https://tradeark.ai/install.sh | bash -s -- --non-interactive --skip-credentials --install-service
+
+<span class="terminal-comment"># Check that TradeArk is running normally</span>
+<span class="terminal-prompt">$</span> curl -fsS http://127.0.0.1:38182/health
+
+<span class="terminal-comment"># 放行防火墙后从另一台设备访问</span>
+<span class="terminal-prompt">$</span> 在浏览器中访问： http://&lt;server-ip&gt;:38182/</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="hero-highlights-row row justify-content-center g-3 g-xl-4 mt-4">
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="hero-highlight">
+                    <div class="hero-highlight-icon hero-highlight-icon--key" aria-hidden="true">
+                        <i class="bi bi-key-fill"></i>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value">&lt;10ms</div>
-                        <div class="stat-label">Order Latency</div>
+                    <div class="hero-highlight-body">
+                        <h5>快速接入 AI 交易</h5>
+                        <p class="text-muted">快速连接 OpenClaw、Claude Code、Codex 等工具，用于加密货币 AI 量化交易。</p>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="hero-highlight">
+                    <div class="hero-highlight-icon hero-highlight-icon--install" aria-hidden="true">
+                        <i class="bi bi-arrow-down-circle-fill"></i>
                     </div>
-                    <div class="terminal-line"><span class="terminal-prompt">$</span> curl -fsSL https://tradeark.ai/install.sh | bash</div>
-                    <div class="terminal-line terminal-comment"># Downloading TradeArk...</div>
-                    <div class="terminal-line terminal-comment"># Installing service...</div>
-                    <div class="terminal-line terminal-output">✓ TradeArk is running on http://127.0.0.1:38182</div>
-                    <div class="terminal-line"><span class="terminal-prompt">$</span> curl http://127.0.0.1:38182/health</div>
-                    <div class="terminal-line terminal-output">{"status":"ok","version":"1.0.0"}</div>
+                    <div class="hero-highlight-body">
+                        <h5>快速本地安装</h5>
+                        <p class="text-muted">Download the local package, extract it into your own folder, and open TradeArk in your browser on this machine.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="hero-highlight">
+                    <div class="hero-highlight-icon hero-highlight-icon--automation" aria-hidden="true">
+                        <i class="bi bi-diagram-3-fill"></i>
+                    </div>
+                    <div class="hero-highlight-body">
+                        <h5>AI 自动化 + 批量交易</h5>
+                        <p class="text-muted">一键接入交易所后，你可以在同一个工作台中完成 AI 自动化交易、手动交易，以及跨多个账户的批量交易。</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Features Section -->
-<section class="section" id="features">
+<section id="product-ui" class="py-5 bg-dark-gradient">
     <div class="container">
-        <div class="section-header">
-            <div class="section-label">Why TradeArk</div>
-            <h2 class="section-title">Everything You Need to Trade</h2>
-            <p class="section-desc">A complete trading platform that runs locally on your machine, giving you full control over your keys, your data, and your strategies.</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon blue"><i class="bi bi-shield-check"></i></div>
-                <h4>Built-in Risk Firewall</h4>
-                <p>Set per-agent token limits, pre-trade policy rules, and live kill switches. Your AI agents trade within boundaries you define, with real-time monitoring and automatic circuit breakers.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon green"><i class="bi bi-cpu"></i></div>
-                <h4>AI Agent Ready</h4>
-                <p>Connect OpenClaw, Claude Code, Codex, Cursor, and other AI agents directly to your trading workspace. Full HTTP API with 29 endpoints for automated trading, market data, and account management.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon orange"><i class="bi bi-grid-3x3-gap"></i></div>
-                <h4>Multi-Exchange Unified</h4>
-                <p>One dashboard for Binance, OKX, Bybit, Bitget, Gate.io and more. Manage spot, futures, and swap trading across all your accounts from a single local interface.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon blue"><i class="bi bi-lock"></i></div>
-                <h4>Keys Never Leave</h4>
-                <p>Your API keys and secrets stay on your machine. TradeArk sends orders directly from your computer to exchanges. No cloud server ever sees your credentials.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon green"><i class="bi bi-lightning-charge"></i></div>
-                <h4>Batch Trading</h4>
-                <p>Execute trades across multiple accounts and exchanges simultaneously. Place, modify, or cancel orders in bulk from one unified trading panel.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon orange"><i class="bi bi-graph-up-arrow"></i></div>
-                <h4>Live Charts & Analytics</h4>
-                <p>Real-time candlestick charts, order book depth, position tracking, and P&L analysis. Everything you need to make informed trading decisions at a glance.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works Section -->
-<section class="section section-alt" id="how-it-works">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">How It Works</div>
-            <h2 class="section-title">From Install to Trading in Minutes</h2>
-            <p class="section-desc">TradeArk runs as a local service on your machine. AI agents and trading tools connect to it over a local HTTP API.</p>
-        </div>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h5>Install Locally</h5>
-                <p>One command installs TradeArk on your Linux, macOS, or Windows machine. Auto-starts as a background service.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h5>Add Exchange Keys</h5>
-                <p>Enter your API keys in the local web UI. They stay encrypted on your machine, never transmitted to any server.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h5>Connect AI Agent</h5>
-                <p>Point your AI agent to http://127.0.0.1:38182. TradeArk provides a full REST API for automated trading.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h5>Trade With Confidence</h5>
-                <p>Risk firewall monitors every order. Set limits, rules, and kill switches. Trade manually or let AI handle it.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Exchanges Section -->
-<section class="section" id="exchanges">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">Supported Exchanges</div>
-            <h2 class="section-title">Connect Your Favorite Platforms</h2>
-            <p class="section-desc">TradeArk supports major cryptocurrency exchanges with unified spot, futures, and swap trading.</p>
-        </div>
-        <div class="exchange-grid">
-            <div class="exchange-badge"><span class="exchange-dot ex-dot-binance"></span> Binance</div>
-            <div class="exchange-badge"><span class="exchange-dot ex-dot-okx"></span> OKX</div>
-            <div class="exchange-badge"><span class="exchange-dot ex-dot-bybit"></span> Bybit</div>
-            <div class="exchange-badge"><span class="exchange-dot ex-dot-bitget"></span> Bitget</div>
-            <div class="exchange-badge"><span class="exchange-dot ex-dot-gate"></span> Gate.io</div>
-        </div>
-    </div>
-</section>
-
-<!-- Agent Platforms Section -->
-<section class="section section-alt">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">AI Agent Integration</div>
-            <h2 class="section-title">Powered by Your Favorite AI Tools</h2>
-            <p class="section-desc">TradeArk works with leading AI coding agents and trading assistants through a simple HTTP API.</p>
-        </div>
-        <div class="platform-grid">
-            <div class="platform-card">
-                <img src="/static/img/platforms/openclaw.png" alt="OpenClaw">
-                <span>OpenClaw</span>
-            </div>
-            <div class="platform-card">
-                <img src="/static/img/platforms/claude-code.svg" alt="Claude Code">
-                <span>Claude Code</span>
-            </div>
-            <div class="platform-card">
-                <img src="/static/img/platforms/codex.svg" alt="Codex">
-                <span>Codex</span>
-            </div>
-            <div class="platform-card">
-                <img src="/static/img/platforms/hermes-agents.svg" alt="Hermes Agents">
-                <span>Hermes Agents</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Installation Section -->
-<section class="section" id="install">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">Get Started</div>
-            <h2 class="section-title">Install TradeArk</h2>
-            <p class="section-desc">Install on your trading machine and start trading in under a minute.</p>
-        </div>
-        <div class="install-grid">
-            <div class="install-card">
-                <div class="os-icon"><i class="bi bi-ubuntu" style="color:#e95420;"></i> <i class="bi bi-apple" style="color:#a2aaad;"></i></div>
-                <h4>Linux / macOS</h4>
-                <p>One command to install, auto-start, and keep running.</p>
-                <div class="code-block">
-                    <button class="copy-btn" onclick="navigator.clipboard.writeText('curl -fsSL https://tradeark.ai/install.sh | bash')">Copy</button>
-                    curl -fsSL https://tradeark.ai/install.sh | bash
+        <div class="skill-spotlight ui-showcase">
+            <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2">产品界面预览</span>
+                    <h2 class="display-6 fw-bold mb-3">See what TradeArk looks like before you install</h2>
+                    <p class="lead text-muted mb-4">TradeArk serves a local web interface at /. Traders and AI agents can watch charts, switch Binance, OKX, Bybit, Bitget, Gate, and other supported exchanges, inspect positions and balances, run AI automation, place manual orders, and manage batch trading from one unified screen.</p>
+                    <div class="ui-showcase-metrics">
+                        <div class="ui-showcase-chip">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span>内嵌行情图表与实时价格信息</span>
+                        </div>
+                        <div class="ui-showcase-chip">
+                            <i class="bi bi-collection-fill"></i>
+                            <span>多账户交易与状态面板</span>
+                        </div>
+                        <div class="ui-showcase-chip">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            <span>下单、止盈止损和批量操作集中在同一个界面中</span>
+                        </div>
+                        <div class="ui-showcase-chip">
+                            <i class="bi bi-diagram-3-fill"></i>
+                            <span>一键接入交易所，支持 AI 自动化和多账户批量交易</span>
+                        </div>
+                    </div>
                 </div>
-                <p style="font-size:0.85rem;color:var(--text-muted);">After install, open: <code>http://127.0.0.1:38182/</code></p>
-            </div>
-            <div class="install-card">
-                <div class="os-icon"><i class="bi bi-windows" style="color:#00a4ef;"></i></div>
-                <h4>Windows</h4>
-                <p>Run PowerShell as Administrator and paste:</p>
-                <div class="code-block">
-                    <button class="copy-btn" onclick="navigator.clipboard.writeText('irm https://tradeark.ai/install.ps1 | iex')">Copy</button>
-                    irm https://tradeark.ai/install.ps1 | iex
+                <div class="col-lg-7">
+                    <div class="ui-showcase-frame">
+                        <img
+                            src="/static/img/signal-executor-ui-demo.png"
+                            alt="TradeArk trading UI screenshot"
+                            class="img-fluid ui-showcase-image"
+                            loading="lazy"
+                        >
+                    </div>
                 </div>
-                <p style="font-size:0.85rem;color:var(--text-muted);">Or download the portable package:</p>
-                <a href="https://tradeark.ai/releases/latest/tradeark_windows_portable.zip" class="dl-link"><i class="bi bi-download"></i> Download (.zip, v1.0.0+20260615.074339Z)</a>
-            </div>
-            <div class="install-card">
-                <div class="os-icon"><i class="bi bi-apple" style="color:#000;"></i></div>
-                <h4>macOS App</h4>
-                <p>Native macOS app with menu bar control.</p>
-                <div style="margin-bottom:0.5rem;">
-                    <a href="https://tradeark.ai/releases/latest/TRADEARK_darwin_arm64.dmg" class="dl-link" style="display:block;margin-bottom:0.3rem;"><i class="bi bi-download"></i> Apple Silicon (.dmg)</a>
-                    <a href="https://tradeark.ai/releases/latest/TRADEARK_darwin_amd64.dmg" class="dl-link" style="display:block;"><i class="bi bi-download"></i> Intel (.dmg)</a>
-                </div>
-                <p style="font-size:0.85rem;color:var(--text-muted);">macOS 13+. Drag to /Applications to install.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="cta-section">
+<section id="ai-risk-control-home" class="py-5">
     <div class="container">
-        <h2>Ready to Set Sail?</h2>
-        <p>Install TradeArk and start trading with AI-powered tools, risk controls, and multi-exchange support -- all running locally on your machine.</p>
-        <div class="hero-actions" style="justify-content:center;">
-            <a href="#install" class="btn btn-primary btn-lg"><i class="bi bi-rocket-takeoff"></i> Get Started Free</a>
-            <a href="https://docs.tradeark.ai/" class="btn btn-outline btn-lg"><i class="bi bi-book"></i> API Documentation</a>
+        <div class="text-center mb-5">
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2">AI Risk Control</span>
+            <h2 class="display-6 fw-bold">Let AI trade through a local firewall, not through raw exchange keys</h2>
+            <p class="lead text-muted section-lead">TradeArk includes a built-in two-layer AI trading firewall for OpenClaw, Claude Code, Codex, and similar local agents. Create a named AI client in the local Web UI, generate a ready-to-paste prompt, and keep TradeArk enforcing limits before any exchange write leaves the machine.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-warning">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <h4>Per-agent token scope</h4>
+                    <p class="text-muted">Issue a separate AI client for each bot, workspace, or operator. Each token is bound to selected saved accounts and can be rotated or revoked instantly from the local Web UI.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-info">
+                        <i class="bi bi-sliders2-vertical"></i>
+                    </div>
+                    <h4>Pre-trade policy engine</h4>
+                    <p class="text-muted">Before an order reaches the exchange, TradeArk can enforce route allowlists, symbol rules, asset scope, leverage ceilings, max quantity, max notional, and rate or daily limits.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-danger">
+                        <i class="bi bi-activity"></i>
+                    </div>
+                    <h4>Live watchdog + kill switches</h4>
+                    <p class="text-muted">A second layer keeps watching balances and positions from the local executor. It can alert, cancel open orders, flatten swap exposure, or freeze a client or account when thresholds are hit.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-success">
+                        <i class="bi bi-magic"></i>
+                    </div>
+                    <h4>Prompt-ready onboarding</h4>
+                    <p class="text-muted">The AI Risk panel can generate a ready-to-paste prompt for OpenClaw, Claude Code, Codex, and similar tools, so teams do not need to handwrite headers, account scope, or route rules.</p>
+                </div>
+            </div>
+        </div>
+        <div class="doc-note mt-4">
+            <p class="text-muted mb-2">余额、持仓、历史等普通本地读取都留在同一台机器上，而交易所写操作只需为每个请求加上已命名客户端标记，就能在 AI 风控下走相同的本地交易路由。</p>
+            <p class="text-muted mb-0">Operators can rotate tokens in one click, freeze a client or account, and keep each AI workflow inside saved-account scope instead of handing out unrestricted live exchange keys.</p>
+        </div>
+        <div class="text-center mt-4">
+            <a href="https://docs.tradeark.ai/#ai-risk-control" class="btn btn-outline-warning btn-lg px-4">
+                <i class="bi bi-shield-check me-2"></i>Read the full AI Risk Control guide
+            </a>
         </div>
     </div>
 </section>
 
-<!-- FAQ Section -->
-<section class="section section-alt" id="faq">
+<section id="ai-risk-workflow" class="py-5 bg-dark-gradient">
     <div class="container">
-        <div class="section-header">
-            <div class="section-label">FAQ</div>
-            <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="text-center mb-5">
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2">AI Control Plane</span>
+            <h2 class="display-6 fw-bold">How the local AI risk loop works end to end</h2>
+            <p class="lead text-muted section-lead">The operator owns the control plane. AI gets prompt-ready access, TradeArk evaluates every protected write locally, and the exchange only sees requests that pass policy.</p>
         </div>
-        <div class="faq-list">
-            <details class="faq-item">
-                <summary>Do my exchange API keys go through your server?</summary>
-                <div class="faq-answer">No. Your API keys stay on your own machine. TradeArk reads them locally and sends requests directly from your computer to the exchange. No cloud server ever sees or stores your credentials.</div>
-            </details>
-            <details class="faq-item">
-                <summary>Which exchanges does TradeArk support?</summary>
-                <div class="faq-answer">TradeArk supports Binance, OKX, Bybit, Bitget, and Gate.io -- covering spot, perpetual futures, and swap trading across all major cryptocurrency pairs. More exchanges are being added regularly.</div>
-            </details>
-            <details class="faq-item">
-                <summary>Can I use AI agents with TradeArk?</summary>
-                <div class="faq-answer">Yes. TradeArk provides a full HTTP API that AI agents like OpenClaw, Claude Code, and Codex can use for automated trading. The built-in risk firewall lets you set per-agent limits, pre-trade rules, and kill switches so your AI trades within safe boundaries.</div>
-            </details>
-            <details class="faq-item">
-                <summary>Which port does TradeArk use?</summary>
-                <div class="faq-answer">By default, TradeArk uses port 38182. Open http://127.0.0.1:38182/ on your local machine. To access from another device on your network, open TCP port 38182 in your firewall first.</div>
-            </details>
-            <details class="faq-item">
-                <summary>How do I stay safe with AI automated trading?</summary>
-                <div class="faq-answer">Start with demo or testnet mode. Configure the risk firewall with position size limits, per-agent token budgets, and pre-trade policy rules. Enable manual confirmation for real orders until you are confident in your AI strategy.</div>
-            </details>
-            <details class="faq-item">
-                <summary>Is TradeArk free to use?</summary>
-                <div class="faq-answer">Yes, TradeArk is free to install and use locally. You only pay exchange trading fees which go directly to the exchange -- TradeArk does not charge any trading fees or commissions.</div>
-            </details>
+        <div class="risk-flow-track mb-4">
+            <span class="risk-flow-node">Operator</span>
+            <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
+            <span class="risk-flow-node">AI prompt</span>
+            <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
+            <span class="risk-flow-node">Local reads</span>
+            <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
+            <span class="risk-flow-node">Protected writes</span>
+            <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
+            <span class="risk-flow-node">Policy gate</span>
+            <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
+            <span class="risk-flow-node">Exchange</span>
+            <span class="risk-flow-arrow" aria-hidden="true">-&gt;</span>
+            <span class="risk-flow-node">Watchdog</span>
+        </div>
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="risk-step-badge mb-3">1</div>
+                    <h5>Create a named AI client</h5>
+                    <p class="text-muted mb-0">Bind it to saved accounts, allowed routes, and policy limits from the local Web UI.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="risk-step-badge mb-3">2</div>
+                    <h5>Generate a prompt the AI can actually use</h5>
+                    <p class="text-muted mb-0">提示词会告诉 AI 该调用哪些本地路由，以及如何为受保护的写操作给每个请求加上已命名客户端标记。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="risk-step-badge mb-3">3</div>
+                    <h5>通过已命名的本地客户端执行交易所写操作</h5>
+                    <p class="text-muted mb-0">Orders, close-all, and cancel-open-orders hit the local firewall instead of bypassing it with raw exchange credentials.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="risk-step-badge mb-3">4</div>
+                    <h5>Block, forward, or freeze</h5>
+                    <p class="text-muted mb-0">Layer 1 can block before the exchange sees the request. Layer 2 can alert, cancel, flatten, or freeze after exposure appears.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="doc-note h-100">
+                    <h5 class="mb-3">What the AI gets</h5>
+                    <p class="text-muted mb-0">生成的提示词会列出要调用的本地路由，以及执行器用来对受保护写操作施加风控策略的已命名客户端标记。</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="doc-note h-100">
+                    <h5 class="mb-3">What the operator keeps</h5>
+                    <p class="text-muted mb-0">One-click rotation, revoke, freeze, account separation, and a clear audit trail for every protected write decision.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="overview" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">你的机器上会安装哪些内容</h2>
+            <p class="lead text-muted section-lead">TradeArk is installed on the same machine where you trade. Setup downloads the program, creates local data files, and can enable automatic startup so your AI tool always connects to the same local service.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-warning">
+                        <i class="bi bi-box-seam-fill"></i>
+                    </div>
+                    <h4>TradeArk core program</h4>
+                    <p class="text-muted">这是安装在你电脑上的本地程序，提供交易页面、本地连接以及交易操作。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-info">
+                        <i class="bi bi-hdd-stack-fill"></i>
+                    </div>
+                    <h4>本地设置与记录</h4>
+                    <p class="text-muted">你的设置和其他本地数据都会保留在这台机器上，而不是存到远程网页账户里。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-success">
+                        <i class="bi bi-gear-fill"></i>
+                    </div>
+                    <h4>后台自动启动</h4>
+                    <p class="text-muted">After installation, TradeArk can start automatically in the background, so you do not need to reopen it manually every time.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-gradient-danger">
+                        <i class="bi bi-key-fill"></i>
+                    </div>
+                    <h4>交易所密钥填写</h4>
+                    <p class="text-muted">连接交易所时，填写 API Key 和 Secret 即可。OKX 和 Bitget 还需要 passphrase。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="install" class="py-5 bg-dark-gradient">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">安装说明</h2>
+            <p class="lead text-muted section-lead">如果你是自己安装，请使用常规安装方式；如果你在准备服务器或 AI 工作流，请使用一行安装命令。</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="install-platform-card h-100">
+                    <h4><i class="bi bi-windows text-warning me-2"></i>Windows</h4>
+                    <p class="text-muted">Portable ZIP for the local browser-based trading UI. On first open you can keep the page public or require a username and password every time. No admin rights, registry writes, or auto-start.</p>
+                    <div class="d-flex gap-2 flex-wrap mb-3">
+                        <a href="https://tradeark.ai/releases/latest/tradeark_windows_portable.zip" class="btn btn-warning"><i class="bi bi-download me-2"></i>下载 Windows 便携 ZIP 包</a>
+                        <span class="badge bg-secondary align-self-center">Windows x64 · 1.0.0+20260615.074339Z</span>
+                    </div>
+                    <p class="text-muted mb-2">将 ZIP 解压到任意用户可写目录，然后运行本地启动器：</p>
+                    <div class="code-block mb-3">
+                        <pre class="mb-0 guide-code">1. Download and extract tradeark_windows_portable.zip
+2. 打开解压后的文件夹
+3. Run Start TradeArk.cmd
+4. Your browser opens the local UI and the first-run access wizard</pre>
+                    </div>
+                    <p class="text-muted mb-2">如果你更喜欢用脚本安装到 LocalAppData，请使用这个 PowerShell 辅助脚本：</p>
+                    <div class="code-block mb-3">
+                        <pre class="mb-0 guide-code">Invoke-WebRequest -Uri https://tradeark.ai/install.ps1 -OutFile install.ps1
+powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
+                    </div>
+                    <p class="text-muted mb-2">本地界面地址：</p>
+                    <div class="code-block mb-4">
+                        <pre class="mb-0 guide-code">http://127.0.0.1:38182/</pre>
+                    </div>
+                    <p class="text-muted mb-0">This Windows package stays in user space. It does not require admin rights, does not write startup registry entries, and only notifies about new versions. Later you can change Web UI access from Settings &gt; Web UI Access, or reset it from the portable folder with: <code>TradeArk.exe web-ui set-password --username &lt;name&gt;</code></p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="install-platform-card h-100">
+                    <h4><i class="bi bi-apple text-warning me-2"></i>macOS</h4>
+                    <p class="text-muted">Menu bar app that installs TradeArk locally and lets you open the trading page or restart the local service with one click. On first open you can leave the page public or protect it with a username and password.</p>
+                    <div class="d-flex gap-2 flex-wrap mb-3">
+                        <a href="https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg" class="btn btn-warning"><i class="bi bi-download me-2"></i>Download TradeArk for macOS (.dmg)</a>
+                        <a href="https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg" class="btn btn-outline-light"><i class="bi bi-download me-2"></i>下载 Intel DMG</a>
+                        <span class="badge bg-secondary align-self-center">macOS 13+ · Apple Silicon / Intel</span>
+                    </div>
+                    <p class="text-muted mb-2">对大多数 macOS 桌面用户来说，直接使用打包好的应用即可：</p>
+                    <div class="code-block mb-3">
+                        <pre class="mb-0 guide-code">1. Download and open the TradeArk macOS package (.dmg)
+2. 将下载的应用拖入 /Applications
+3. 打开应用，然后使用菜单栏图标在浏览器中打开本地界面
+4. 通过菜单重启本地服务，或打开后台自动启动</pre>
+                    </div>
+                    <p class="text-muted mb-2">这个 DMG 可以在 Finder 中正常打开，但还没有完成 Apple notarization。第一次打开时，macOS 仍可能要求你右键应用并选择一次“打开”。</p>
+                    <p class="text-muted mb-2">如果你需要命令行部署或无人值守安装，也可以继续使用一行安装命令：</p>
+                    <div class="code-block mb-4">
+                        <pre class="mb-0 guide-code">curl -fsSL https://tradeark.ai/install.sh | bash -s -- --non-interactive --skip-credentials --install-service</pre>
+                    </div>
+                    <p class="text-muted mb-0">The command-line install sets up the same local TradeArk service. The app is simply a more convenient desktop way to manage it. If you enable password mode, every browser visit asks you to sign in until you switch back to public access or reset the password from Settings &gt; Web UI Access.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="install-platform-card h-100">
+                    <h4><i class="bi bi-ubuntu text-warning me-2"></i>Linux (Ubuntu / Debian)</h4>
+                    <p class="text-muted">Run one command and Linux will download TradeArk, install it the first time, or update the existing install in place later. On first open you can keep the page public or require a username and password every time:</p>
+                    <div class="code-block mb-3">
+                        <pre class="mb-0 guide-code">curl -fsSL https://tradeark.ai/install.sh | bash -s -- --non-interactive --skip-credentials --install-service</pre>
+                    </div>
+                    <p class="text-muted mb-2">When TradeArk is already installed, rerunning the same command keeps your local data, reuses the current Linux service settings when possible, and restarts the local service automatically.</p>
+                    <p class="text-muted mb-2">Once the Linux build itself reports a new version inside the local Web UI, clicking the top-right update prompt now runs the in-place Linux update automatically and shows progress until the local service comes back. Windows and macOS still open manual download/update links.</p>
+                    <p class="text-muted mb-2">After it finishes, confirm that TradeArk is running:</p>
+                    <div class="code-block mb-3">
+                        <pre class="mb-0 guide-code">curl http://127.0.0.1:38182/health</pre>
+                    </div>
+                    <p class="text-muted mb-2">If you want to open the TradeArk page from another device, allow TCP port 38182 on the Linux firewall or security group, then visit:</p>
+                    <div class="code-block mb-3">
+                        <pre class="mb-0 guide-code">http://&lt;server-ip&gt;:38182/</pre>
+                    </div>
+                    <p class="text-muted mb-0">By default, TradeArk uses port 38182 on Linux. The installer tries to set it to start automatically for the current user, and if you do not use root it installs under your user directory. Later you can change Web UI access from Settings &gt; Web UI Access, or reset it from the shell with: <code>tradeark web-ui set-password --username &lt;name&gt;</code></p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="install-platform-card h-100">
+                    <h4><i class="bi bi-router-fill text-warning me-2"></i>安装后可用的本地地址</h4>
+                    <div class="code-block mb-4">
+                        <pre class="mb-0 guide-code">GET  http://127.0.0.1:38182/health
+GET  http://127.0.0.1:38182/positions
+GET  http://127.0.0.1:38182/balances
+POST http://127.0.0.1:38182/place-order
+POST http://127.0.0.1:38182/cancel-order
+POST http://127.0.0.1:38182/set-tpsl
+POST http://127.0.0.1:38182/cancel-tpsl
+POST http://127.0.0.1:38182/close-all</pre>
+                    </div>
+                    <p class="text-muted mb-0">在同一台机器上，你的 AI 工具可以继续使用上面的本地地址。在 Linux 上放行防火墙后，你也可以从另一台设备访问网页界面。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="flow" class="py-5 my-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">推荐的首次使用流程</h2>
+            <p class="lead text-muted section-lead">The easiest first run is: install TradeArk, add your exchange API keys, check balances and positions, then decide whether to use demo or live trading.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="step-number">1</div>
+                    <h5>Install TradeArk locally</h5>
+                    <p class="text-muted">请安装在运行 AI 工具或交易工作流的同一台机器上。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="step-number">2</div>
+                    <h5>添加交易所 API 密钥</h5>
+                    <p class="text-muted">填写 API Key 和 Secret 即可。OKX 和 Bitget 还需要 passphrase。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="step-number">3</div>
+                    <h5>交易前先检查数据</h5>
+                    <p class="text-muted">在下真实订单前，先确认余额、持仓和订单历史都能正确读取。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="step-card h-100">
+                    <div class="step-number">4</div>
+                    <h5>选择执行模式</h5>
+                    <p class="text-muted">先使用 demo 或 testnet。只有在确认账户和权限都正确之后，再切换到真实交易。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="api-reference" class="py-5 bg-dark-gradient">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="display-6 fw-bold">TradeArk API Reference</h2>
+            <p class="lead text-muted section-lead mt-3">完整 HTTP 参考（29 个端点）—— 包含请求/响应结构、参数和各交易所说明 —— 已放在单独的文档页面中。</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+                <a href="https://docs.tradeark.ai/" class="btn btn-warning btn-lg"><i class="bi bi-book me-2"></i>打开 API 文档</a>
+                <a href="https://docs.tradeark.ai/#api-reference" class="btn btn-outline-light btn-lg"><i class="bi bi-list-ul me-2"></i>接口总览</a>
+            </div>
+            <div class="row g-3 justify-content-center mt-4">
+                <div class="col-md-4 col-lg-3">
+                    <div class="step-card h-100">
+                        <h6 class="mb-2"><i class="bi bi-shield-check text-warning me-2"></i>交易</h6>
+                        <p class="text-muted small mb-0">/place-order, /cancel-order, /close-all, /set-leverage, /set-tpsl, /cancel-tpsl, /set-margin-mode</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="step-card h-100">
+                        <h6 class="mb-2"><i class="bi bi-graph-up text-warning me-2"></i>读取与历史</h6>
+                        <p class="text-muted small mb-0">/positions, /balances, /orders-history, /positions-history, /open-orders, /open-tpsl-orders</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="step-card h-100">
+                        <h6 class="mb-2"><i class="bi bi-globe text-warning me-2"></i>市场与工具</h6>
+                        <p class="text-muted small mb-0">/market/symbols, /market/ticker, /market/klines, /accounts, /settings/ai, /ai/proxy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="py-5 bg-dark-gradient">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">常见问题</h2>
+            <p class="lead text-muted section-lead">这里汇总了大多数用户开始前最常问的问题。</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="faq-card h-100">
+                    <h5>Will this install TradeArk on my computer?</h5>
+                    <p class="text-muted">Yes. The installer downloads TradeArk to your computer and can keep it running locally in the background for your AI tool or trading page.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="faq-card h-100">
+                    <h5>我的交易所 API 密钥会经过你们的服务器吗？</h5>
+                    <p class="text-muted">No. Your API keys stay on your own machine. TradeArk reads them locally and sends requests from your machine directly to the exchange.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="faq-card h-100">
+                    <h5>Which port does TradeArk use?</h5>
+                    <p class="text-muted">By default, TradeArk uses port 38182. On the same machine, open http://127.0.0.1:38182/ . If you want to access it from another Linux device, open that port in the firewall first.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="faq-card h-100">
+                    <h5>Can I protect the local Web UI with a password?</h5>
+                    <p class="text-muted">Yes. The first time you open TradeArk, it can stay public or require a username and password for every visit. Later you can switch modes from Settings &gt; Web UI Access, or reset the password from the packaged binary with the web-ui set-password command.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="faq-card h-100">
+                    <h5>启用 AI 交易时，怎样做更安全？</h5>
+                    <p class="text-muted">先从 demo 模式开始，真实下单保留人工确认，并在让 AI 发起真实交易前设置好杠杆和风险限制。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="software-platforms" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">支持的软件平台</h2>
+            <p class="lead text-muted section-lead">TradeArk can be connected from OpenClaw, Claude Code, Codex, Hermes Agents, and other agent platforms for one-stop access to multiple cryptocurrency exchanges and unified management.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card h-100 text-center software-platform-card">
+                    <div class="platform-logo-badge" aria-hidden="true">
+                        <img src="/static/img/platforms/openclaw.png" alt="OpenClaw" class="platform-logo-image platform-logo-image--openclaw">
+                    </div>
+                    <h5 class="mb-2">OpenClaw</h5>
+                    <p class="text-muted mb-0">Local agent workflows can call TradeArk for exchange access, order execution, and trading automation.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card h-100 text-center software-platform-card">
+                    <div class="platform-logo-badge" aria-hidden="true">
+                        <img src="/static/img/platforms/claude-code.svg" alt="Claude Code" class="platform-logo-image">
+                    </div>
+                    <h5 class="mb-2">Claude Code</h5>
+                    <p class="text-muted mb-0">可将 Claude Code 用作本地交易副驾驶，用于研究、手动执行和自动化工作流。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card h-100 text-center software-platform-card">
+                    <div class="platform-logo-badge" aria-hidden="true">
+                        <img src="/static/img/platforms/codex.svg" alt="Codex" class="platform-logo-image">
+                    </div>
+                    <h5 class="mb-2">Codex</h5>
+                    <p class="text-muted mb-0">Codex can use TradeArk as a local trading gateway for crypto research, order execution, and AI trading automation.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="step-card h-100 text-center software-platform-card">
+                    <div class="platform-logo-badge" aria-hidden="true">
+                        <img src="/static/img/platforms/hermes-agents.svg" alt="Hermes Agents" class="platform-logo-image">
+                    </div>
+                    <h5 class="mb-2">Hermes Agents</h5>
+                    <p class="text-muted mb-0">Hermes Agents and other multi-agent runtimes can unify cryptocurrency exchange operations through TradeArk.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
     </main>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer py-5 mt-5">
         <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="footer-brand">
-                        <img src="/static/img/logo_tr.png" alt="TradeArk">
-                        <span>TradeArk</span>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-warning"><span aria-hidden="true">??</span> TradeArk</h5>
+                    <p class="text-muted">TradeArk delivers professional cryptocurrency trading signal automation for modern traders.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6>产品</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="/zh-hans/#overview" class="text-muted">概览</a></li>
+                        <li><a href="/zh-hans/#install" class="text-muted">安装</a></li>
+                        <li><a href="/zh-hans/#flow" class="text-muted">首次使用</a></li>
+                        <li><a href="/zh-hans/#faq" class="text-muted">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6>交易所</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">OKX</a></li>
+                        <li><a href="#" class="text-muted">Binance</a></li>
+                        <li><a href="#" class="text-muted">Bitget</a></li>
+                        <li><a href="#" class="text-muted">Gate.io</a></li>
+                        <li><a href="#" class="text-muted">Bybit</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>支持平台</h6>
+                    <div class="d-flex gap-3 mt-3">
+                        <span class="badge bg-secondary"><i class="bi bi-ubuntu"></i> Ubuntu</span>
+                        <span class="badge bg-secondary"><i class="bi bi-ubuntu"></i> Debian</span>
+                        <span class="badge bg-secondary"><i class="bi bi-apple"></i> macOS</span>
+                        <span class="badge bg-secondary"><i class="bi bi-windows"></i> Windows</span>
                     </div>
-                    <p class="footer-desc">Local-first cryptocurrency trading platform with AI automation, risk firewall, and multi-exchange support. Your keys, your data, your trades.</p>
-                </div>
-                <div>
-                    <h6>Product</h6>
-                    <ul class="footer-links">
-                        <li><a href="#overview">Overview</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#install">Installation</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h6>Exchanges</h6>
-                    <ul class="footer-links">
-                        <li><a href="#exchanges">Binance</a></li>
-                        <li><a href="#exchanges">OKX</a></li>
-                        <li><a href="#exchanges">Bybit</a></li>
-                        <li><a href="#exchanges">Bitget</a></li>
-                        <li><a href="#exchanges">Gate.io</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h6>Resources</h6>
-                    <ul class="footer-links">
-                        <li><a href="https://docs.tradeark.ai/">API Documentation</a></li>
-                        <li><a href="https://docs.tradeark.ai" target="_blank">User Manual</a></li>
-                        <li><a href="https://github.com/tradeark" target="_blank">GitHub</a></li>
-                        <li><a href="https://tradeark.ai/install.sh">Linux Installer</a></li>
-                        <li><a href="https://tradeark.ai/install.ps1">Windows Installer</a></li>
-                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <span>&copy; 2026 TradeArk. All rights reserved.</span>
-                <span>Built for traders, powered by AI.</span>
+            <hr class="my-4">
+            <div class="text-center text-muted">
+                <small>&copy; 2026 TradeArk. 保留所有权利。</small>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS (cache busted) -->
+    <script src="/static/js/main.js?v=20260421-1"></script>
+    
 </body>
 </html>
