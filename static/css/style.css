@@ -549,6 +549,17 @@ h6 {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.hero-app-frame {
+    max-width: 920px;
+    margin-left: auto;
+}
+
+.hero-app-image {
+    display: block;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 /* Code */
 .code-block,
 .hero-terminal,
@@ -984,6 +995,10 @@ code {
 
     .skill-spotlight {
         padding: 1.12rem;
+    }
+
+    .hero-app-frame {
+        max-width: none;
     }
 
     .executor-table th,
