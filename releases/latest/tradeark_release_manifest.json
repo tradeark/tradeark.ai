@@ -1,8 +1,8 @@
 {
-  "version": "1.0.179.8432",
+  "version": "1.0.180.8433",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260628.092211Z",
-  "publishedAtUtc": "2026-06-28T09:22:11.6838954Z",
+  "displayVersion": "1.0.0+20260628.104302Z",
+  "publishedAtUtc": "2026-06-28T10:43:02.5488376Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
@@ -39,8 +39,8 @@
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 21492424,
-        "binarySha256": "4d5b2742b2fe0f562012df057a30b2f79b70c8e880ac1acb1118b2521614bbbb",
+        "binarySize": 21496520,
+        "binarySha256": "082e3bb835c80e4e9a4d86f90f2803c894c1caabb93211987fa57d2b61b65d4b",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
         "releaseNotes": "The local UI update prompt now runs the Linux in-place updater automatically and shows progress until the local service restarts."
       }
