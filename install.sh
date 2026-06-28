@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 set -euo pipefail
 
@@ -58,7 +58,7 @@ emit_update_progress() {
     local stage="$2"
     local message="$3"
 
-    printf 'SE_UPDATE_PROGRESS|%s|%s|%s\n' "$progress" "$stage" "$message"
+    printf 'SE_UPDATE_PROGRESS|%s|%s|%s\n' "$progress" "$stage" "$message" >&2
 }
 
 usage() {
@@ -431,16 +431,16 @@ manifest_string_value() {
 legacy_download_url() {
     case "$1" in
         linux-amd64)
-            printf '%s/tradeark-linux-amd64' "$LEGACY_RELEASE_BASE_URL"
+            printf '%s/tradeark_linux_amd64' "$LEGACY_RELEASE_BASE_URL"
             ;;
         linux-arm64)
-            printf '%s/tradeark-linux-arm64' "$LEGACY_RELEASE_BASE_URL"
+            printf '%s/tradeark_linux_arm64' "$LEGACY_RELEASE_BASE_URL"
             ;;
         darwin-amd64)
-            printf '%s/tradeark-darwin-amd64' "$LEGACY_RELEASE_BASE_URL"
+            printf '%s/tradeark_darwin_amd64' "$LEGACY_RELEASE_BASE_URL"
             ;;
         darwin-arm64)
-            printf '%s/tradeark-darwin-arm64' "$LEGACY_RELEASE_BASE_URL"
+            printf '%s/tradeark_darwin_arm64' "$LEGACY_RELEASE_BASE_URL"
             ;;
         *)
             return 1
