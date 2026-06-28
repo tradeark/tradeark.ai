@@ -743,16 +743,19 @@ code {
 
 .platform-logo-image {
     display: block;
-    max-width: 38px;
-    max-height: 38px;
-    width: auto;
-    height: auto;
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
 }
 
 .platform-logo-image--openclaw {
-    max-width: 50px;
-    max-height: 50px;
     border-radius: 8px;
+}
+
+.platform-logo-image--claude,
+.platform-logo-image--codex {
+    width: 52px;
+    height: 52px;
 }
 
 .software-platform-card p {
