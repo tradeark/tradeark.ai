@@ -647,6 +647,30 @@ code {
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn.is-copied {
+    color: var(--green);
+    border-color: rgba(69, 255, 157, 0.45);
+    background: rgba(69, 255, 157, 0.12);
+}
+
+.copy-btn.is-copy-failed {
+    color: var(--red);
+    border-color: rgba(255, 93, 115, 0.45);
+    background: rgba(255, 93, 115, 0.12);
+}
+
+.command-copy-block pre,
+.guide-code-block pre {
+    padding-right: 3rem;
 }
 
 /* API and tables */

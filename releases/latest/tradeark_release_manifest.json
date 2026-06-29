@@ -1,22 +1,22 @@
 {
-  "version": "1.0.181.8434",
+  "version": "1.0.180.975",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260628.110236Z",
-  "publishedAtUtc": "2026-06-28T11:02:36.8521522Z",
+  "displayVersion": "1.0.0+20260629.090502Z",
+  "publishedAtUtc": "2026-06-29T01:05:02.9278233Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6645277,
-  "installerSha256": "81be48728ae531a1e536fcadd4edaf232bf773c10cdf94f638cba685a4a33d92",
+  "installerSize": 6839345,
+  "installerSha256": "9a3c87772871bc8a5eb5d76da1aa97c983e21b0255969d5d3802b38e68a449f2",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 18628608,
-  "backendSha256": "f03097d088b5db2772b231802e2ec9fcf5ae04a2d7ebffa420832190b9be8412",
+  "backendSize": 19230720,
+  "backendSha256": "420ed90c6bc901f10d2e5994284ccf4542e3bef5acae5ab4bb34a3d18c06d389",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while Windows stays on a manual portable download refresh flow.",
+  "releaseNotes": "Installers and launchers now print the detected public TradeArk URL when available, making remote access setup clearer on Windows.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6645277,
-      "installerSha256": "81be48728ae531a1e536fcadd4edaf232bf773c10cdf94f638cba685a4a33d92",
+      "installerSize": 6839345,
+      "installerSha256": "9a3c87772871bc8a5eb5d76da1aa97c983e21b0255969d5d3802b38e68a449f2",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 18628608,
-      "backendSha256": "f03097d088b5db2772b231802e2ec9fcf5ae04a2d7ebffa420832190b9be8412",
+      "backendSize": 19230720,
+      "backendSha256": "420ed90c6bc901f10d2e5994284ccf4542e3bef5acae5ab4bb34a3d18c06d389",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while Windows stays on a manual portable download refresh flow."
+      "releaseNotes": "Installers and launchers now print the detected public TradeArk URL when available, making remote access setup clearer on Windows."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 21496520,
-        "binarySha256": "beda71f0d9064d96d881b85f86880d0234d8e801ac933d3a53c31c6598d023c0",
+        "binarySize": 21984200,
+        "binarySha256": "c40447f65d610d0f930597a8eb84be8df0fed4f95ecff5d5cdccc3f11b8c21a9",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "The local UI update prompt now runs the Linux in-place updater automatically and shows progress until the local service restarts."
+        "releaseNotes": "Install and startup flows now print the detected public TradeArk URL when available, making remote access setup faster on Linux."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
-        "binarySize": 12804256,
-        "binarySha256": "cfcbbff39ace8b96e7b9a94d95cc684b05ccae63cddbd5841f871fed98a0727c",
+        "binarySize": 13201104,
+        "binarySha256": "f1bd244ac5c56aa9a2efcb093e22f889e897557af75fce4e8da79fc444d927c2",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7159464,
-        "dmgSha256": "e00aa2ef290908b060c1b13f37dfe6a68257d8d5952bac8a50a91d9124ab77da",
+        "dmgSize": 7324556,
+        "dmgSha256": "5235424c02ba762338272e88d2a59a3bdd2724af4781d10f9340c504a134c99a",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6524441,
-        "appZipSha256": "ebcf6c86c170d99739c485a4f234bc28986140a629adf2a66ea804e1a5b28d2a",
+        "appZipSize": 6674226,
+        "appZipSha256": "20d4d97e9f4152c9999d099078431cbb2c2767f14f2be95cc4db65ac4f60e59c",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while macOS continues to use manual download and install refreshes."
+        "releaseNotes": "Install and startup flows now print the detected public TradeArk URL when available, making remote access setup clearer on macOS."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
-        "binarySize": 14036584,
-        "binarySha256": "298f0f978ec75a5d3cc672377eed2d72e53e8c18cbd66ebc62d2912070f740f8",
+        "binarySize": 14504096,
+        "binarySha256": "ed4f2b9734f44ae040b8d2c2597abac9fc9774bf8480d1579e20aa0af6e107cd",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 7898205,
-        "dmgSha256": "0be110489a09527ca43f2c5aac742a718c8588eb51226e74604affd2fa1f7d60",
+        "dmgSize": 8091670,
+        "dmgSha256": "e1ff7936607d8240945eba233a3a863eb02b969bd5ac0aa49af74eb93cf19570",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7099094,
-        "appZipSha256": "e230b82d309f606184bc19d6e98c93ab63fa1cf25fd496e7a963cb53d5300d0e",
+        "appZipSize": 7268882,
+        "appZipSha256": "6fed958916ee4ea24181e68cc297ebf762573c73e5f0e0fda3a7136b598f2632",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "Update prompts now distinguish platform behavior: Linux can update in place with progress from the local UI, while macOS continues to use manual download and install refreshes."
+        "releaseNotes": "Install and startup flows now print the detected public TradeArk URL when available, making remote access setup clearer on macOS."
       }
     }
   }

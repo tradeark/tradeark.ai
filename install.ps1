@@ -118,6 +118,66 @@ function Download-Archive {
     Invoke-WebRequest -Uri $downloadUrl -OutFile $archivePath
 }
 
+function Format-TradeArkHttpUrl {
+    param(
+        [Parameter(Mandatory = $true)][string]$Host,
+        [Parameter(Mandatory = $true)][int]$ResolvedPort,
+        [string]$Path = ""
+    )
+
+    $hostText = if ($Host.Contains(":") -and -not $Host.StartsWith("[")) {
+        "[$Host]"
+    } else {
+        $Host
+    }
+
+    return "http://${hostText}:$ResolvedPort$Path"
+}
+
+function Get-TrimmedIpAddress {
+    param([string]$Value)
+
+    if ([string]::IsNullOrWhiteSpace($Value)) {
+        return $null
+    }
+
+    $candidate = ($Value -replace "`r", "").Trim()
+    if ([string]::IsNullOrWhiteSpace($candidate)) {
+        return $null
+    }
+
+    $parsed = $null
+    if ([System.Net.IPAddress]::TryParse($candidate, [ref]$parsed)) {
+        return $parsed.IPAddressToString
+    }
+
+    return $null
+}
+
+function Get-PublicIpAddress {
+    $uris = @(
+        "https://api64.ipify.org",
+        "https://api.ipify.org",
+        "https://checkip.amazonaws.com",
+        "https://ifconfig.me/ip",
+        "https://ipinfo.io/ip"
+    )
+
+    foreach ($uri in $uris) {
+        try {
+            $response = Invoke-WebRequest -UseBasicParsing -Uri $uri -Method Get -TimeoutSec 5
+            $candidate = Get-TrimmedIpAddress ([string]$response.Content)
+            if ($candidate) {
+                return $candidate
+            }
+        }
+        catch {
+        }
+    }
+
+    return $null
+}
+
 function Install-Archive {
     New-Item -ItemType Directory -Path $extractPath -Force | Out-Null
     New-Item -ItemType Directory -Path $resolvedInstallDir -Force | Out-Null
@@ -144,10 +204,19 @@ function Launch-PortablePackage {
 }
 
 function Show-Completion {
+    $localUiUrl = Format-TradeArkHttpUrl -Host "127.0.0.1" -ResolvedPort $Port -Path "/"
+    $publicIp = Get-PublicIpAddress
+
     Write-Host ""
     Write-Host "Portable package extracted to: $resolvedInstallDir" -ForegroundColor Green
     Write-Host "Start later with: $launcherPath" -ForegroundColor Green
-    Write-Host "Local UI: http://127.0.0.1:38182/" -ForegroundColor Green
+    Write-Host "Local UI: $localUiUrl" -ForegroundColor Green
+    if ($publicIp) {
+        Write-Host ("Remote UI: " + (Format-TradeArkHttpUrl -Host $publicIp -ResolvedPort $Port -Path "/")) -ForegroundColor Green
+        Write-Host ("Remote API: " + (Format-TradeArkHttpUrl -Host $publicIp -ResolvedPort $Port)) -ForegroundColor Green
+    } else {
+        Write-Host "Remote UI: auto-detect unavailable. Use this machine's public IP with port $Port." -ForegroundColor Yellow
+    }
     Write-Host "First open: choose public access or username/password access for the local Web UI." -ForegroundColor Green
     Write-Host "Reset later from Settings > Web UI Access or with: $resolvedInstallDir\TradeArk.exe web-ui set-password --username <name>" -ForegroundColor Green
 }

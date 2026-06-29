@@ -383,23 +383,32 @@
                     <p class="text-muted">Portable ZIP for the local browser-based trading UI. On first open you can keep the page public or require a username and password every time. No admin rights, registry writes, or auto-start.</p>
                     <div class="d-flex gap-2 flex-wrap mb-3">
                         <a href="https://tradeark.ai/releases/latest/tradeark_windows_portable.zip" class="btn btn-warning"><i class="bi bi-download me-2"></i>下载 Windows 便携 ZIP 包</a>
-                        <span class="badge bg-secondary align-self-center">Windows x64 · 1.0.0+20260628.110236Z</span>
+                        <span class="badge bg-secondary align-self-center">Windows x64 · 1.0.0+20260629.090502Z</span>
                     </div>
                     <p class="text-muted mb-2">将 ZIP 解压到任意用户可写目录，然后运行本地启动器：</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">1. 下载并解压 tradeark_windows_portable.zip
 2. 打开解压后的文件夹
 3. 运行 Start TradeArk.cmd
 4. Your browser opens the local UI and the first-run access wizard</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-2">如果你更喜欢用脚本安装到 LocalAppData，请使用这个 PowerShell 辅助脚本：</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">Invoke-WebRequest -Uri https://tradeark.ai/install.ps1 -OutFile install.ps1
 powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-2">本地界面地址：</p>
-                    <div class="code-block mb-4">
+                    <div class="code-block mb-4 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">http://127.0.0.1:38182/</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-0">This Windows package stays in user space. It does not require admin rights, does not write startup registry entries, and only notifies about new versions. Later you can change Web UI access from Settings &gt; Web UI Access, or reset it from the portable folder with: <code>TradeArk.exe web-ui set-password --username &lt;name&gt;</code></p>
                 </div>
@@ -414,16 +423,22 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                         <span class="badge bg-secondary align-self-center">macOS 13+ · Apple Silicon / Intel</span>
                     </div>
                     <p class="text-muted mb-2">对大多数 macOS 桌面用户来说，直接使用打包好的应用即可：</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">1. 下载并打开 TradeArk macOS 安装包 (.dmg)
 2. 将下载的应用拖入 /Applications
 3. 打开应用，然后使用菜单栏图标在浏览器中打开本地界面
 4. 通过菜单重启本地服务，或打开后台自动启动</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-2">这个 DMG 可以在 Finder 中正常打开，但还没有完成 Apple notarization。第一次打开时，macOS 仍可能要求你右键应用并选择一次“打开”。</p>
                     <p class="text-muted mb-2">如果你需要命令行部署或无人值守安装，也可以继续使用一行安装命令：</p>
-                    <div class="code-block mb-4">
+                    <div class="code-block mb-4 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">curl -fsSL https://tradeark.ai/install.sh | bash -s -- --non-interactive --skip-credentials --install-service</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-0">The command-line install sets up the same local TradeArk service. The app is simply a more convenient desktop way to manage it. If you enable password mode, every browser visit asks you to sign in until you switch back to public access or reset the password from Settings &gt; Web UI Access.</p>
                 </div>
@@ -432,18 +447,27 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                 <div class="install-platform-card h-100">
                     <h4><i class="bi bi-ubuntu text-warning me-2"></i>Linux (Ubuntu / Debian)</h4>
                     <p class="text-muted">运行一条命令，Linux 会下载 TradeArk；首次运行会完成安装，之后可原地更新已有安装。第一次打开时，你可以选择保持页面公开，或每次访问都要求用户名和密码：</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">curl -fsSL https://tradeark.ai/install.sh | bash -s -- --non-interactive --skip-credentials --install-service</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-2">当 TradeArk 已安装时，再次运行同一命令会保留本地数据，尽可能复用当前 Linux 服务设置，并自动重启本地服务。</p>
                     <p class="text-muted mb-2">当 Linux 版本在本地 Web UI 中提示有新版本时，点击右上角更新提示会自动执行原地更新，并显示进度直到本地服务恢复。Windows 和 macOS 仍会打开手动下载/更新链接。</p>
                     <p class="text-muted mb-2">完成后，请确认 TradeArk 正在运行：</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">curl http://127.0.0.1:38182/health</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-2">如果你想从另一台设备打开 TradeArk 页面，请先在 Linux 防火墙或安全组中放行 TCP 38182 端口，然后访问：</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">http://&lt;server-ip&gt;:38182/</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-0">By default, TradeArk uses port 38182 on Linux. The installer tries to set it to start automatically for the current user, and if you do not use root it installs under your user directory. Later you can change Web UI access from Settings &gt; Web UI Access, or reset it from the shell with: <code>tradeark web-ui set-password --username &lt;name&gt;</code></p>
                 </div>
@@ -453,21 +477,30 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                     <h4><i class="bi bi-trash3-fill text-warning me-2"></i>Uninstall TradeArk</h4>
                     <p class="text-muted">Use the uninstall helper when you want to remove the local service, installed binary, and registered local-agent skills. Local data is kept by default so account profiles and settings are not deleted accidentally.</p>
                     <p class="text-muted mb-2">Linux / macOS command-line uninstall:</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">curl -fsSL https://tradeark.ai/uninstall.sh | bash -s -- --non-interactive</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-2">Windows scripted uninstall:</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">Invoke-WebRequest -Uri https://tradeark.ai/uninstall.ps1 -OutFile uninstall.ps1
 powershell -ExecutionPolicy Bypass -File .\uninstall.ps1 -Yes</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-2">To remove local data as well, add the explicit data-removal flag after you have verified that you no longer need saved settings or profiles:</p>
-                    <div class="code-block mb-3">
+                    <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code"># Linux / macOS
 curl -fsSL https://tradeark.ai/uninstall.sh | bash -s -- --non-interactive --remove-data
 
 # Windows
 powershell -ExecutionPolicy Bypass -File .\uninstall.ps1 -Yes -RemoveData</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-0">The uninstall helper also removes TradeArk skill registrations from Codex, OpenClaw, OpenCode, Claude, and generic local-agent skill folders when those folders exist.</p>
                 </div>
@@ -475,7 +508,7 @@ powershell -ExecutionPolicy Bypass -File .\uninstall.ps1 -Yes -RemoveData</pre>
             <div class="col-lg-6">
                 <div class="install-platform-card h-100">
                     <h4><i class="bi bi-router-fill text-warning me-2"></i>安装后可用的本地地址</h4>
-                    <div class="code-block mb-4">
+                    <div class="code-block mb-4 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">GET  http://127.0.0.1:38182/health
 GET  http://127.0.0.1:38182/positions
 GET  http://127.0.0.1:38182/balances
@@ -484,6 +517,9 @@ POST http://127.0.0.1:38182/cancel-order
 POST http://127.0.0.1:38182/set-tpsl
 POST http://127.0.0.1:38182/cancel-tpsl
 POST http://127.0.0.1:38182/close-all</pre>
+                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="text-muted mb-0">在同一台机器上，你的 AI 工具可以继续使用上面的本地地址。在 Linux 上放行防火墙后，你也可以从另一台设备访问网页界面。</p>
                 </div>
@@ -704,7 +740,7 @@ POST http://127.0.0.1:38182/close-all</pre>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS (cache busted) -->
-    <script src="/static/js/main.js?v=20260626-ops"></script>
+    <script src="/static/js/main.js?v=20260628-copy"></script>
     
 </body>
 </html>

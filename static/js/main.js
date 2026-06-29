@@ -5,6 +5,102 @@ let selectedMode = null;
 let selectedExchange = null;
 let selectedOS = null;
 
+async function writeClipboardText(text) {
+    const normalized = String(text ?? '').replace(/\s+$/, '');
+    if (!normalized) {
+        return false;
+    }
+
+    if (navigator.clipboard?.writeText) {
+        try {
+            await navigator.clipboard.writeText(normalized);
+            return true;
+        } catch (_) {}
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = normalized;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.top = '-9999px';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
+
+    let success = false;
+    try {
+        success = document.execCommand('copy');
+    } catch (_) {
+        success = false;
+    }
+
+    document.body.removeChild(textarea);
+    return success;
+}
+
+function flashCopyButton(button, copied) {
+    if (!button) {
+        return;
+    }
+
+    const icon = button.querySelector('i');
+    const originalIconClass = button.dataset.originalIconClass || icon?.className || 'bi bi-clipboard';
+    button.dataset.originalIconClass = originalIconClass;
+    button.classList.remove('is-copy-failed');
+
+    if (copied) {
+        button.classList.add('is-copied');
+        if (icon) {
+            icon.className = 'bi bi-check2';
+        }
+    } else {
+        button.classList.add('is-copy-failed');
+        if (icon) {
+            icon.className = 'bi bi-exclamation-lg';
+        }
+    }
+
+    window.setTimeout(() => {
+        button.classList.remove('is-copied', 'is-copy-failed');
+        if (icon) {
+            icon.className = originalIconClass;
+        }
+    }, copied ? 1400 : 1800);
+}
+
+async function copyFromNode(node, button) {
+    const source = node && typeof node.value === 'string' ? node.value : node?.textContent;
+    const copied = await writeClipboardText(source || '');
+    flashCopyButton(button, copied);
+    return copied;
+}
+
+async function copyCodeBlock(button) {
+    const targetSelector = String(button?.dataset?.copyTarget || '').trim();
+    const sourceNode = targetSelector
+        ? document.querySelector(targetSelector)
+        : button?.closest('.command-copy-block, .code-block')?.querySelector('pre, textarea, code');
+    return copyFromNode(sourceNode, button);
+}
+
+async function copyInstallCommand() {
+    const sourceNode = document.getElementById('install-code');
+    const button = document.querySelector('#install-command .copy-btn');
+    return copyFromNode(sourceNode, button);
+}
+
+async function copyToken() {
+    const sourceNode = document.getElementById('enc-token');
+    const button = document.querySelector('#token-result .copy-btn');
+    return copyFromNode(sourceNode, button);
+}
+
+window.copyCodeBlock = copyCodeBlock;
+window.copyInstallCommand = copyInstallCommand;
+window.copyToken = copyToken;
+
 // ==================== Mode Selection ====================
 
 function selectMode(mode) {
@@ -289,162 +385,199 @@ curl -X POST "${baseUrl}/close-all" \\
 - 500: unexpected server-side failure
 `;
     }
-      "exchange": "${exchange}",
-      "asset_type": "swap",
-      "side": "buy",
-      "quantity": 0.1,
-      "credentials": ${directCredentials}
+    
+    document.querySelectorAll('.mode-card').forEach((card) => {
+        card.classList.toggle('active', card.id === `mode-${mode}`);
+    });
+
+    const onlineSetup = document.getElementById('online-setup');
+    const localSetup = document.getElementById('local-setup');
+    const tokenResult = document.getElementById('token-result');
+
+    if (onlineSetup) {
+        onlineSetup.style.display = mode === 'online' ? 'block' : 'none';
+    }
+    if (localSetup) {
+        localSetup.style.display = mode === 'local' ? 'block' : 'none';
+    }
+    if (tokenResult) {
+        tokenResult.style.display = 'none';
     }
 
-    ### Body Fields:
-    | Field              | Type    | Required | Description |
-    |--------------------|---------|----------|-------------|
-    | symbol             | string  | Yes      | BTCUSDT or BTC/USDT input accepted |
-    | exchange           | string  | Yes      | okx, binance, bitget, gate, bybit |
-    | asset_type         | string  | Yes      | spot or swap |
-    | side               | string  | Yes      | buy or sell |
-    | quantity           | number  | Yes      | Must be greater than zero |
-    | leverage           | number  | No       | Swap only, default 1 |
-    | margin_mode        | string  | No       | cross or isolated |
-    | position_side      | string  | No       | long, short, or omit in one-way mode |
-    | action             | string  | No       | open or close |
-    | auto_reverse       | number  | No       | 1 closes opposite swap side before opening |
-    | enc                | string  | Cond.    | Online encrypted credentials |
-    | api_key            | string  | Cond.    | Direct local API key |
-    | secret_key         | string  | Cond.    | Direct local API secret |
-    | passphrase         | string  | Cond.    | Required for OKX / Bitget direct mode |
-    | testnet            | boolean | No       | Route the request to a supported demo/testnet environment when true |
+    showApiDocs(mode);
+}
 
-    Notes:
-    - Choose exactly one auth path: enc or direct top-level API key fields.
-    - For OKX perpetuals, quantity is documented here as coin quantity. The adapter converts to the exchange lot size internally.
-    - When auto_reverse=1 on swap orders, the executor attempts to close the opposite side before opening the new side.
+function exchangeRequiresPassphrase(exchange) {
+    return exchange === 'okx' || exchange === 'bitget';
+}
 
-    ### Response:
-    {
-      "success": true,
-      "data": {
-        "success": true,
-        "order_id": "123456789",
-        "exchange": "${exchange.toUpperCase()}",
-        "symbol": "BTC-USDT-SWAP",
-        "side": "buy",
-        "quantity": "0.1"
-      }
+function buildDirectCredentialsSnippet(exchange, credentialsStr = null) {
+    if (typeof credentialsStr === 'string' && credentialsStr.trim()) {
+        return credentialsStr.trim();
     }
 
+    const fields = [
+        '"api_key": "YOUR_API_KEY"',
+        '"secret_key": "YOUR_SECRET_KEY"',
+    ];
+    if (exchangeRequiresPassphrase(exchange)) {
+        fields.push('"passphrase": "YOUR_PASSPHRASE"');
+    }
+    return `{ ${fields.join(', ')} }`;
+}
 
-    ================================================================================
-    ## POST /close-all
-    ================================================================================
+function buildDirectQueryString(exchange) {
+    const params = [
+        `exchange=${encodeURIComponent(exchange)}`,
+        'api_key=YOUR_KEY',
+        'secret_key=YOUR_SECRET',
+    ];
+    if (exchangeRequiresPassphrase(exchange)) {
+        params.push('passphrase=YOUR_PASSPHRASE');
+    }
+    return params.join('&');
+}
 
-    Closes swap positions or liquidates spot holdings for the selected symbol, or all symbols if symbol is omitted.
+function setActiveButtonState(selector, activeValue, dataKey) {
+    document.querySelectorAll(selector).forEach((button) => {
+        button.classList.toggle('active', button.dataset[dataKey] === activeValue);
+    });
+}
 
-    ### Request Example:
-    curl -X POST "${baseUrl}/close-all" \\
-      -H "Content-Type: application/json" \\
-      -d '{
-        "symbol": "BTCUSDT",
-        "exchange": "${exchange}",
-        "asset_type": "swap",
-        ${closeAllAuthBlock}
-      }'
+function getSiteOrigin() {
+    return window.location.origin.replace(/\/$/, '');
+}
 
-    ### Alternative Direct Credentials Body:
-    {
-      "symbol": "BTCUSDT",
-      "exchange": "${exchange}",
-      "asset_type": "swap",
-      ${directCredentialsLines},
-      "testnet": true
+function getApiBaseUrl() {
+    return window.API_BASE_URL || `${getSiteOrigin()}/api`;
+}
+
+function selectExchange(exchange) {
+    selectedExchange = String(exchange || '').trim().toLowerCase();
+    if (!selectedExchange) {
+        return;
     }
 
-    ### Body Fields:
-    | Field              | Type    | Required | Description |
-    |--------------------|---------|----------|-------------|
-    | symbol             | string  | No       | Omit to close all positions / holdings for that asset_type |
-    | exchange           | string  | Yes      | okx, binance, bitget, gate, bybit |
-    | asset_type         | string  | Yes      | spot or swap |
-    | enc                | string  | Cond.    | Online encrypted credentials |
-    | api_key            | string  | Cond.    | Direct local API key |
-    | secret_key         | string  | Cond.    | Direct local API secret |
-    | passphrase         | string  | Cond.    | Required for OKX / Bitget direct mode |
-    | testnet            | boolean | No       | Route the request to a supported demo/testnet environment when true |
+    setActiveButtonState('.exchange-btn', selectedExchange, 'exchange');
 
-    ### Response:
-    {
-      "success": true,
-      "data": [
-        {
-          "success": true,
-          "order_id": "123456789",
-          "exchange": "${exchange.toUpperCase()}",
-          "symbol": "BTC-USDT-SWAP",
-          "side": "sell",
-          "quantity": "0.1"
+    const credentialsForm = document.getElementById('credentials-form');
+    if (credentialsForm) {
+        credentialsForm.style.display = 'block';
+    }
+
+    const passphraseGroup = document.getElementById('passphrase-group');
+    if (passphraseGroup) {
+        passphraseGroup.style.display = exchangeRequiresPassphrase(selectedExchange) ? 'block' : 'none';
+    }
+}
+
+function buildInstallCommand(os) {
+    const origin = getSiteOrigin();
+    if (os === 'windows') {
+        return [
+            `Invoke-WebRequest -Uri ${origin}/install.ps1 -OutFile install.ps1`,
+            'powershell -ExecutionPolicy Bypass -File .\\install.ps1 -Yes',
+        ].join('\n');
+    }
+
+    return `curl -fsSL ${origin}/install.sh | bash -s -- --non-interactive --skip-credentials --install-service`;
+}
+
+function selectOS(os) {
+    selectedOS = String(os || '').trim().toLowerCase();
+    if (!selectedOS) {
+        return;
+    }
+
+    setActiveButtonState('.os-btn', selectedOS, 'os');
+
+    const installCommand = document.getElementById('install-command');
+    const installCode = document.getElementById('install-code');
+    if (installCode) {
+        installCode.textContent = buildInstallCommand(selectedOS);
+    }
+    if (installCommand) {
+        installCommand.style.display = 'block';
+    }
+}
+
+function showApiDocs(mode = selectedMode || 'online') {
+    const apiDocsText = document.getElementById('api-docs-text');
+    if (apiDocsText) {
+        apiDocsText.value = generateApiDocs(getApiBaseUrl(), mode);
+    }
+
+    const apiDocsSection = document.getElementById('api-docs');
+    if (apiDocsSection) {
+        apiDocsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+async function copyApiDocs() {
+    return copyFromNode(document.getElementById('api-docs-text'), document.querySelector('#api-docs .btn.btn-warning'));
+}
+
+async function generateEncryptedCredentials() {
+    const apiKey = String(document.getElementById('api-key')?.value || '').trim();
+    const secretKey = String(document.getElementById('secret-key')?.value || '').trim();
+    const passphrase = String(document.getElementById('passphrase')?.value || '').trim();
+
+    if (!apiKey || !secretKey) {
+        window.alert('API key and secret key are required.');
+        return;
+    }
+
+    const trigger = document.querySelector('#credentials-form .btn.btn-warning');
+    const originalHtml = trigger?.innerHTML || '';
+    if (trigger) {
+        trigger.disabled = true;
+        trigger.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Working...';
+    }
+
+    try {
+        const response = await fetch(`${getApiBaseUrl()}/encrypt`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                api_key: apiKey,
+                secret_key: secretKey,
+                passphrase,
+            }),
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok || !payload.success || !payload.enc) {
+            throw new Error(payload.error || 'Failed to generate encrypted credentials.');
         }
-      ]
+
+        const tokenField = document.getElementById('enc-token');
+        if (tokenField) {
+            tokenField.value = payload.enc;
+        }
+
+        const onlineSetup = document.getElementById('online-setup');
+        const tokenResult = document.getElementById('token-result');
+        if (onlineSetup) {
+            onlineSetup.style.display = 'none';
+        }
+        if (tokenResult) {
+            tokenResult.style.display = 'block';
+            tokenResult.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    } catch (error) {
+        window.alert(String(error?.message || error || 'Failed to generate encrypted credentials.'));
+    } finally {
+        if (trigger) {
+            trigger.disabled = false;
+            trigger.innerHTML = originalHtml;
+        }
     }
-
-
-    ================================================================================
-    ## Supported Exchanges
-    ================================================================================
-
-    | Exchange  | ID      | Spot | Futures | Passphrase Required |
-    |-----------|---------|------|---------|---------------------|
-    | OKX       | okx     | ✓    | ✓       | Yes                 |
-    | Binance   | binance | ✓    | ✓       | No                  |
-    | Bitget    | bitget  | ✓    | ✓       | Yes                 |
-    | Gate.io   | gate    | ✓    | ✓       | No                  |
-    | Bybit     | bybit   | ✓    | ✓       | No                  |
-
-
-    ================================================================================
-    ## Error Shape and Common Local Validation Failures
-    ================================================================================
-
-    {
-      "success": false,
-      "error": "Error message description"
-    }
-
-    Common cases:
-    - 400: invalid parameters, missing symbol, invalid quantity, unsupported exchange
-    - 401: credentials cannot be resolved or decrypted
-    - 400: testnet=true requested for an exchange that does not currently support demo/testnet mode in this executor
-    - 500: unexpected server-side failure
-    `;
-    }
-        "filled_at": "2026-01-31T10:00:01Z"
-      }
-    ],
-    "total": 1
-  }
 }
 
-
-================================================================================
-## Your Encrypted Token
-================================================================================
-
-Keep this token secure. It contains your encrypted API credentials.
-
-${encToken}
-
-================================================================================
-## Supported Exchanges
-================================================================================
-
-| Exchange  | ID      | Spot | Futures | Passphrase Required |
-|-----------|---------|------|---------|---------------------|
-| OKX       | okx     | ✓    | ✓       | Yes                 |
-| Binance   | binance | ✓    | ✓       | No                  |
-| Bitget    | bitget  | ✓    | ✓       | Yes                 |
-| Gate.io   | gate    | ✓    | ✓       | No                  |
-| Bybit     | bybit   | ✓    | ✓       | No                  |
-`;
-}
+window.selectExchange = selectExchange;
+window.selectOS = selectOS;
+window.showApiDocs = showApiDocs;
+window.copyApiDocs = copyApiDocs;
+window.generateEncryptedCredentials = generateEncryptedCredentials;
 
 function generateApiDocs(baseUrl, mode) {
     const encNote = mode === 'online' 
@@ -799,6 +932,29 @@ document.addEventListener('DOMContentLoaded', function() {
   if (apiDocsText) {
     apiDocsText.value = defaultDocs;
   }
+
+    document.querySelectorAll('.exchange-btn').forEach((button) => {
+        button.addEventListener('click', () => selectExchange(button.dataset.exchange));
+    });
+
+    document.querySelectorAll('.os-btn').forEach((button) => {
+        button.addEventListener('click', () => selectOS(button.dataset.os));
+    });
+
+    document.querySelectorAll('.toggle-visibility').forEach((button) => {
+        button.addEventListener('click', () => {
+            const input = button.parentElement?.querySelector('input');
+            const icon = button.querySelector('i');
+            if (!input) {
+                return;
+            }
+            const nextType = input.type === 'password' ? 'text' : 'password';
+            input.type = nextType;
+            if (icon) {
+                icon.className = nextType === 'password' ? 'bi bi-eye' : 'bi bi-eye-slash';
+            }
+        });
+    });
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

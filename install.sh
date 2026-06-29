@@ -405,6 +405,56 @@ download_text() {
     fi
 }
 
+normalize_ip_candidate() {
+    local candidate=""
+
+    candidate=$(printf '%s\n' "$1" | tr -d '\r' | sed -n 's/^[[:space:]]*//; s/[[:space:]]*$//; /./{p;q;}')
+    if [[ -z "$candidate" ]]; then
+        return 1
+    fi
+
+    if [[ "$candidate" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]] || [[ "$candidate" == *:* ]]; then
+        printf '%s' "$candidate"
+        return 0
+    fi
+
+    return 1
+}
+
+detect_public_ip() {
+    local url=""
+    local response=""
+    local candidate=""
+
+    for url in \
+        "https://api64.ipify.org" \
+        "https://api.ipify.org" \
+        "https://checkip.amazonaws.com" \
+        "https://ifconfig.me/ip" \
+        "https://ipinfo.io/ip"; do
+        response=$(download_text "$url" 2>/dev/null || true)
+        candidate=$(normalize_ip_candidate "$response" || true)
+        if [[ -n "$candidate" ]]; then
+            printf '%s' "$candidate"
+            return 0
+        fi
+    done
+
+    return 1
+}
+
+format_http_url() {
+    local host="$1"
+    local port="$2"
+    local suffix="${3:-}"
+
+    if [[ "$host" == *:* && "$host" != \[*\] ]]; then
+        printf 'http://[%s]:%s%s' "$host" "$port" "$suffix"
+    else
+        printf 'http://%s:%s%s' "$host" "$port" "$suffix"
+    fi
+}
+
 fetch_release_manifest() {
     if [[ -n "$RELEASE_MANIFEST_JSON" ]]; then
         return
@@ -700,6 +750,7 @@ enable_linux_linger() {
 print_completion() {
     local command_bin
     local testnet_payload=""
+    local public_ip=""
 
     command_bin=$(command_hint)
 
@@ -765,11 +816,21 @@ print_completion() {
         echo -e "${YELLOW}PATH note:${NC} ${INSTALL_DIR} is not on PATH in this shell. Use ${command_bin} directly or add it to PATH."
     fi
 
-    if [[ "$OS" == "linux" ]]; then
+    public_ip=$(detect_public_ip || true)
+
+    if [[ "$OS" == "linux" || "$OS" == "darwin" ]]; then
         echo ""
         echo -e "${CYAN}Remote access:${NC}"
-        echo "  Web UI: http://<server-ip>:${SERVICE_PORT}/"
-        echo "  API:    http://<server-ip>:${SERVICE_PORT}"
+        if [[ -n "$public_ip" ]]; then
+            echo "  Web UI: $(format_http_url "$public_ip" "$SERVICE_PORT" "/")"
+            echo "  API:    $(format_http_url "$public_ip" "$SERVICE_PORT")"
+        else
+            echo "  Public Web UI: auto-detect unavailable. Use this machine's public IP with port ${SERVICE_PORT}."
+            echo "  Public API:    auto-detect unavailable. Use this machine's public IP with port ${SERVICE_PORT}."
+        fi
+    fi
+
+    if [[ "$OS" == "linux" ]]; then
         echo -e "${YELLOW}Firewall note:${NC} Open TCP port ${SERVICE_PORT} on the Linux host if you want to access the Rust Executor UI from another machine."
     fi
 }
