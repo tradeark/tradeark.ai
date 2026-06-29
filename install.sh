@@ -323,10 +323,10 @@ detect_platform() {
 
 print_banner() {
     echo -e "${CYAN}"
-    echo "╔══════════════════════════════════════════════════════════════╗"
-    echo "║       TradeArk - Local Mode Installer               ║"
-    echo "║   Keyring-backed credentials and local background service  ║"
-    echo "╚══════════════════════════════════════════════════════════════╝"
+    echo "+--------------------------------------------------------------+"
+    echo "|       TradeArk - Local Mode Installer                        |"
+    echo "|   Keyring-backed credentials and local background service     |"
+    echo "+--------------------------------------------------------------+"
     echo -e "${NC}"
 }
 
