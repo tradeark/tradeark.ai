@@ -120,15 +120,15 @@ function Download-Archive {
 
 function Format-TradeArkHttpUrl {
     param(
-        [Parameter(Mandatory = $true)][string]$Host,
+        [Parameter(Mandatory = $true)][string]$ResolvedHost,
         [Parameter(Mandatory = $true)][int]$ResolvedPort,
         [string]$Path = ""
     )
 
-    $hostText = if ($Host.Contains(":") -and -not $Host.StartsWith("[")) {
-        "[$Host]"
+    $hostText = if ($ResolvedHost.Contains(":") -and -not $ResolvedHost.StartsWith("[")) {
+        "[$ResolvedHost]"
     } else {
-        $Host
+        $ResolvedHost
     }
 
     return "http://${hostText}:$ResolvedPort$Path"
@@ -204,7 +204,7 @@ function Launch-PortablePackage {
 }
 
 function Show-Completion {
-    $localUiUrl = Format-TradeArkHttpUrl -Host "127.0.0.1" -ResolvedPort $Port -Path "/"
+    $localUiUrl = Format-TradeArkHttpUrl -ResolvedHost "127.0.0.1" -ResolvedPort $Port -Path "/"
     $publicIp = Get-PublicIpAddress
 
     Write-Host ""
@@ -212,13 +212,14 @@ function Show-Completion {
     Write-Host "Start later with: $launcherPath" -ForegroundColor Green
     Write-Host "Local UI: $localUiUrl" -ForegroundColor Green
     if ($publicIp) {
-        Write-Host ("Remote UI: " + (Format-TradeArkHttpUrl -Host $publicIp -ResolvedPort $Port -Path "/")) -ForegroundColor Green
-        Write-Host ("Remote API: " + (Format-TradeArkHttpUrl -Host $publicIp -ResolvedPort $Port)) -ForegroundColor Green
+        Write-Host ("Remote UI: " + (Format-TradeArkHttpUrl -ResolvedHost $publicIp -ResolvedPort $Port -Path "/")) -ForegroundColor Green
+        Write-Host ("Remote API: " + (Format-TradeArkHttpUrl -ResolvedHost $publicIp -ResolvedPort $Port)) -ForegroundColor Green
     } else {
         Write-Host "Remote UI: auto-detect unavailable. Use this machine's public IP with port $Port." -ForegroundColor Yellow
     }
     Write-Host "First open: choose public access or username/password access for the local Web UI." -ForegroundColor Green
     Write-Host "Reset later from Settings > Web UI Access or with: $resolvedInstallDir\TradeArk.exe web-ui set-password --username <name>" -ForegroundColor Green
+    Write-Host "Clear login lockouts with: $resolvedInstallDir\TradeArk.exe web-ui clear-login-locks" -ForegroundColor Green
 }
 
 function Main {

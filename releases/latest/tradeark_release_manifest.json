@@ -1,22 +1,22 @@
 {
-  "version": "1.0.181.12218",
+  "version": "1.0.181.12925",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260630.133432Z",
-  "publishedAtUtc": "2026-06-30T13:34:32Z",
+  "displayVersion": "1.0.0+20260630.142140Z",
+  "publishedAtUtc": "2026-06-30T14:21:40.6418405Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6836655,
-  "installerSha256": "e2d9ee8827f950d61c76e3da5dfa1e1aaa118b16236e785d59fa5041f6f4d773",
+  "installerSize": 6845295,
+  "installerSha256": "15c2af77944a0c40aae33b8c3ef952c100cf94c64db3cc3eb3b73ec0425ae761",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19196928,
-  "backendSha256": "7d38ce60990796447bdca4b79c4514bec88130e0b8713bd150288e74e1ef20c2",
+  "backendSize": 19231744,
+  "backendSha256": "a4331f3c4985b7a434977dc166891309f058257f1c4239625cbdb1f65a75d8e4",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "Installers and launchers now print the detected public TradeArk URL when available, making remote access setup clearer on Windows.",
+  "releaseNotes": "Web UI login now blocks repeated failures by IP, the CLI can clear login lockouts, and the Windows installer no longer collides with PowerShell's Host variable.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6836655,
-      "installerSha256": "e2d9ee8827f950d61c76e3da5dfa1e1aaa118b16236e785d59fa5041f6f4d773",
+      "installerSize": 6845295,
+      "installerSha256": "15c2af77944a0c40aae33b8c3ef952c100cf94c64db3cc3eb3b73ec0425ae761",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19196928,
-      "backendSha256": "7d38ce60990796447bdca4b79c4514bec88130e0b8713bd150288e74e1ef20c2",
+      "backendSize": 19231744,
+      "backendSha256": "a4331f3c4985b7a434977dc166891309f058257f1c4239625cbdb1f65a75d8e4",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "Installers and launchers now print the detected public TradeArk URL when available, making remote access setup clearer on Windows."
+      "releaseNotes": "Web UI login now blocks repeated failures by IP, the CLI can clear login lockouts, and the Windows installer no longer collides with PowerShell's Host variable."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 21996488,
-        "binarySha256": "c3af59c9ab10e10926a77212ce747ea57a3f49c337c7e2a8aaa1d28ac5b71b33",
+        "binarySize": 22021064,
+        "binarySha256": "41b77e7fd44e44a26497dc678267a5600af12df7a22e490f3b5053ac01360708",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "Install and startup flows now print the detected public TradeArk URL when available, making remote access setup faster on Linux."
+        "releaseNotes": "Web UI login now blocks repeated failures by IP, and the CLI can clear login lockouts from the local machine."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
-        "binarySize": 13217632,
-        "binarySha256": "8dec02eaf818616ccd31d3781c457b7d5b4c0c0946d8bc2fba10724af0504920",
+        "binarySize": 13234160,
+        "binarySha256": "f9c19b492f7c0d9cb227ddfb7664b937f122702c7fe0c30f9c2a25996babd9bb",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7330259,
-        "dmgSha256": "838890814b13eec649303cd2430eae0b8af2e175ddc972b4b56b66b174fc5ef9",
+        "dmgSize": 7337148,
+        "dmgSha256": "da2027e838ddb046befa762ae2d0b4086579d6528f78f7cd48abc493b6b84b46",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6677661,
-        "appZipSha256": "9bcad9cf669af64dc41b8bf9547bc0f07e9189440d4561f235529ffe501f8958",
+        "appZipSize": 6684437,
+        "appZipSha256": "2e2969dad6db5ceb92c9ceef08e06d6c13ffc5cb2578b0a0f5350af67597dce3",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "Install and startup flows now print the detected public TradeArk URL when available, making remote access setup clearer on macOS."
+        "releaseNotes": "Web UI login now blocks repeated failures by IP, and the CLI can clear login lockouts from the local machine."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
-        "binarySize": 14516392,
-        "binarySha256": "9d1a5c1ecede2da30c3d92b6657a3fc7f0f2e9894c14776c4aa6e280a7951c85",
+        "binarySize": 14532800,
+        "binarySha256": "51b17111ac3c77f2ef65fae18a1ad0f5bf3008769125fb9ef1c6db3d1c7f4666",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8097356,
-        "dmgSha256": "4472441cf56b495c76c9e5a7d90285abb7181993c8802d4bdfb6c6990e86e3be",
+        "dmgSize": 8105153,
+        "dmgSha256": "b0c1ef2ebe65b1cbc87711df6088eb3de5bbd856e02eb00c6916d253bf87d8d2",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7274549,
-        "appZipSha256": "ba0d9648a0564154fd00d700d3eca9d53da55ce0683c1c4c2d233ffba9ec01f1",
+        "appZipSize": 7281595,
+        "appZipSha256": "91263cc739c3309a61bb6b2659f837ff22d3d459c93ab6c7777609192d80ebbf",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "Install and startup flows now print the detected public TradeArk URL when available, making remote access setup clearer on macOS."
+        "releaseNotes": "Web UI login now blocks repeated failures by IP, and the CLI can clear login lockouts from the local machine."
       }
     }
   }
