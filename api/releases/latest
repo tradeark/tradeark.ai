@@ -1,22 +1,22 @@
 {
-  "version": "1.0.182.9619",
+  "version": "1.0.182.11980",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260701.104116Z",
-  "publishedAtUtc": "2026-07-01T10:41:16.2013734Z",
+  "displayVersion": "1.0.0+20260701.131841Z",
+  "publishedAtUtc": "2026-07-01T13:18:41.1621507Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6889643,
-  "installerSha256": "7df5906817055993ab05728bacd268664c00b746a682f70f35462ad0891f9769",
+  "installerSize": 6889938,
+  "installerSha256": "6ee1b96f53e36aafd0fb3960650cf4d26eaeb108b7cdbb0526d7838e1f67f3d6",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19357696,
-  "backendSha256": "18ba51e3ba0babdc9ea0693482e2b99e8b17253e6aabe2381b7ed80fdce2fe1f",
+  "backendSize": 19361792,
+  "backendSha256": "2c09efa182952975b47271f01c7b342ecc6bf098f2a9f9120fa750bef9cd24e4",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "Proxy auto-detect now reports per-candidate diagnostics, checks more Binance K-line endpoints, and the website Windows installer command no longer loses PowerShell variables.",
+  "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6889643,
-      "installerSha256": "7df5906817055993ab05728bacd268664c00b746a682f70f35462ad0891f9769",
+      "installerSize": 6889938,
+      "installerSha256": "6ee1b96f53e36aafd0fb3960650cf4d26eaeb108b7cdbb0526d7838e1f67f3d6",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19357696,
-      "backendSha256": "18ba51e3ba0babdc9ea0693482e2b99e8b17253e6aabe2381b7ed80fdce2fe1f",
+      "backendSize": 19361792,
+      "backendSha256": "2c09efa182952975b47271f01c7b342ecc6bf098f2a9f9120fa750bef9cd24e4",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "Proxy auto-detect now reports per-candidate diagnostics, checks more Binance K-line endpoints, and the website Windows installer command no longer loses PowerShell variables."
+      "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 22111400,
-        "binarySha256": "eb674a14ed057a869e25b5b6304b0048bfc5a78d87fabb88d2c26e110360c1bd",
+        "binarySize": 22115496,
+        "binarySha256": "be682d55b1928ffe54f040e0468c48c6bbcd058e38c9221533ab6c88d765a62f",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "Proxy auto-detect now reports per-candidate diagnostics and checks more Binance K-line endpoints before saving a local proxy."
+        "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
         "binarySize": 13316944,
-        "binarySha256": "8bd025b8839fb35f18f372660427f9e6edc844f5a81e14d1268db774cdfaca50",
+        "binarySha256": "596a73ace0b4891aba7fe7dad29c89d25b1fb75633e13e0b49a65e97182567df",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7374156,
-        "dmgSha256": "eeae056c376014e2deea57f24c5ff50499f5cc56fbeb57042a4a07b7e430e89e",
+        "dmgSize": 7374245,
+        "dmgSha256": "9e921f82903ed868b591e664514a63ec8dc714baf52315da9f0ad36f2bd5af55",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6722849,
-        "appZipSha256": "d5f1966d3b96bc088bbfa904e3cf38c933eb9fa9869f1fea7b0b6e5817f8ebd9",
+        "appZipSize": 6723078,
+        "appZipSha256": "7865b1560e2cbaa1b46364f42db10a2141e7c34030fc5050dea428eb6d4cf5a9",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "Proxy auto-detect now reports per-candidate diagnostics and checks more Binance K-line endpoints before saving a local proxy."
+        "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
         "binarySize": 14619048,
-        "binarySha256": "f6c8501d63eaf1d87b15c12f58c588e470e0cf00743257cff42d22840f218c97",
+        "binarySha256": "e4ff0609c8babfee8573e4a88e4a051b367e3e4770a1d914b3e1071a2176ab6a",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8149559,
-        "dmgSha256": "2274f8c740c255cd7d424289adb88d79df6abf9c61366dc3fc5fd38646579674",
+        "dmgSize": 8149813,
+        "dmgSha256": "c1383feb6cf500084fa234cd4cb2f8f3fa8b89ed1e468b34030f75917a066162",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7319514,
-        "appZipSha256": "8dcdf7a9d6acbff3ac2d295f3b21d896c381f78dfa11c72d8775df8338513798",
+        "appZipSize": 7319640,
+        "appZipSha256": "682bf5ea7f3acc0ded2d025baa328d950923579953217db9f9a554c6b156b737",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "Proxy auto-detect now reports per-candidate diagnostics and checks more Binance K-line endpoints before saving a local proxy."
+        "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
       }
     }
   }
