@@ -1,22 +1,22 @@
 {
-  "version": "1.0.182.3240",
+  "version": "1.0.182.5544",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260701.033600Z",
-  "publishedAtUtc": "2026-07-01T03:36:00Z",
+  "displayVersion": "1.0.0+20260701.060936Z",
+  "publishedAtUtc": "2026-07-01T06:09:36Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6848772,
-  "installerSha256": "be378105270df726d9b059f52f9e11229fc78b1b1c284385ffe1d3bca413b3be",
+  "installerSize": 6869726,
+  "installerSha256": "45da5e0419638d5e314205e6aa0680470dcb7fbc8671893e4f8c414548ecc630",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19244032,
-  "backendSha256": "d4f75a2a5aeac32ea6baa7737d6b267aaafe3b7fe6a7b33e1e4f472bc8a3fa68",
+  "backendSize": 19305472,
+  "backendSha256": "ccdfe0e0ad4356cfdc18a7828e19fd6e84744685dcb915055277fed5b70ab031",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache.",
+  "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6848772,
-      "installerSha256": "be378105270df726d9b059f52f9e11229fc78b1b1c284385ffe1d3bca413b3be",
+      "installerSize": 6869726,
+      "installerSha256": "45da5e0419638d5e314205e6aa0680470dcb7fbc8671893e4f8c414548ecc630",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19244032,
-      "backendSha256": "d4f75a2a5aeac32ea6baa7737d6b267aaafe3b7fe6a7b33e1e4f472bc8a3fa68",
+      "backendSize": 19305472,
+      "backendSha256": "ccdfe0e0ad4356cfdc18a7828e19fd6e84744685dcb915055277fed5b70ab031",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
+      "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 22025128,
-        "binarySha256": "d9001cbcbc6af68d673119a9ff3a117442c000e055d10877f0ee5d39e80dcecc",
+        "binarySize": 22074568,
+        "binarySha256": "4de02e2a96edd3fe25926e11b7d18873b24dac0e5ff058b8e4e3b3c764dce3a2",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
+        "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
-        "binarySize": 13234176,
-        "binarySha256": "d30d2f00588fe330ac5b25959d32f17d7b87ddb9eac9a7e5138e4efdaf6e02b1",
+        "binarySize": 13283888,
+        "binarySha256": "ba822f5c6496349eb09dda605df16169c474d240116ad6ab5ec54b57112ef609",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7339213,
-        "dmgSha256": "bfbd463383f0547c4c77a631291ba08977fd80127fe54eb42ff102f7735aa1d7",
+        "dmgSize": 7359542,
+        "dmgSha256": "fc1079cb6f5e8ec77213ce5cd656e072a61a7ad19ae61fdbf82c4c8ee4be3a22",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6687617,
-        "appZipSha256": "1ca7905d945f6efb9a254cfc5b32b926d56c0ae7794fa09301ca31fa435be639",
+        "appZipSize": 6706490,
+        "appZipSha256": "1760fdd5d4cc03343224b45c104f0135637aa1412acd27e8fffe993755403bac",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
+        "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
-        "binarySize": 14541000,
-        "binarySha256": "6f5d5f041c9bd8f7980439e5d7fc8a33ecfcf911ffb2aa8faffcab113a23220f",
+        "binarySize": 14582128,
+        "binarySha256": "e99e5a8f17186bee9fbc2d348651dbd86d0f6a40ec9b910900b97f892f37a90f",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8105973,
-        "dmgSha256": "d73873298c097fb2a5767b60560982be26332a0f4f61be4740fb298cf560fa9e",
+        "dmgSize": 8128206,
+        "dmgSha256": "843ddcd5de0f4e89db00f7dfa90881495687e7763d331fbf74a9da60ccc5721a",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7283664,
-        "appZipSha256": "b7196f901befe9da761574c5d4525a4e160dcedee3615cc411f0e493114ff738",
+        "appZipSize": 7304951,
+        "appZipSha256": "6902a82c04a2ba8a3839d9c571071677f7724837cadaec79a619da96ac1aa245",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
+        "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
       }
     }
   }
