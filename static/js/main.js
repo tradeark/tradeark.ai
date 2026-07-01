@@ -474,10 +474,7 @@ function selectExchange(exchange) {
 function buildInstallCommand(os) {
     const origin = getSiteOrigin();
     if (os === 'windows') {
-        return [
-            `Invoke-WebRequest -Uri ${origin}/install.ps1 -OutFile install.ps1`,
-            'powershell -ExecutionPolicy Bypass -File .\\install.ps1 -Yes',
-        ].join('\n');
+        return `powershell -ExecutionPolicy Bypass -Command "$p=Join-Path $env:TEMP 'tradeark-install.ps1'; Invoke-WebRequest -Uri ${origin}/install.ps1 -OutFile $p; & $p -Yes"`;
     }
 
     return `curl -fsSL ${origin}/install.sh | bash -s -- --non-interactive --skip-credentials --install-service`;

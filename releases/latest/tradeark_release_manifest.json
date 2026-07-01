@@ -1,22 +1,22 @@
 {
-  "version": "1.0.182.5544",
+  "version": "1.0.182.6449",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260701.060936Z",
-  "publishedAtUtc": "2026-07-01T06:09:36Z",
+  "displayVersion": "1.0.0+20260701.070958Z",
+  "publishedAtUtc": "2026-07-01T07:09:58Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6869726,
-  "installerSha256": "45da5e0419638d5e314205e6aa0680470dcb7fbc8671893e4f8c414548ecc630",
+  "installerSize": 6879977,
+  "installerSha256": "78177502bfafc5fc49c91fb29a7b28bb3253578e40a015510fd4f2d00931b801",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19305472,
-  "backendSha256": "ccdfe0e0ad4356cfdc18a7828e19fd6e84744685dcb915055277fed5b70ab031",
+  "backendSize": 19330560,
+  "backendSha256": "54116bbb7632b02e3424e8403e3135f344bb280a1b8a039698cf7cb159384228",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data.",
+  "releaseNotes": "Network settings now include proxy test and auto-detect actions, and the website Windows installer command is now a single line.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6869726,
-      "installerSha256": "45da5e0419638d5e314205e6aa0680470dcb7fbc8671893e4f8c414548ecc630",
+      "installerSize": 6879977,
+      "installerSha256": "78177502bfafc5fc49c91fb29a7b28bb3253578e40a015510fd4f2d00931b801",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19305472,
-      "backendSha256": "ccdfe0e0ad4356cfdc18a7828e19fd6e84744685dcb915055277fed5b70ab031",
+      "backendSize": 19330560,
+      "backendSha256": "54116bbb7632b02e3424e8403e3135f344bb280a1b8a039698cf7cb159384228",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
+      "releaseNotes": "Network settings now include proxy test and auto-detect actions, and the website Windows installer command is now a single line."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 22074568,
-        "binarySha256": "4de02e2a96edd3fe25926e11b7d18873b24dac0e5ff058b8e4e3b3c764dce3a2",
+        "binarySize": 22090920,
+        "binarySha256": "9eca65239ae204f55b00c4c3512db7bd4fc3a7d43d2ec63c59ddd1c29b41b82b",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
+        "releaseNotes": "Network settings now include proxy test and auto-detect actions for quickly verifying Binance K-line access through a local proxy."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
-        "binarySize": 13283888,
-        "binarySha256": "ba822f5c6496349eb09dda605df16169c474d240116ad6ab5ec54b57112ef609",
+        "binarySize": 13316928,
+        "binarySha256": "e6221bece46bdc0e5851b376b1c4c4165eb983ae51409522fd04d089fdc94ac4",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7359542,
-        "dmgSha256": "fc1079cb6f5e8ec77213ce5cd656e072a61a7ad19ae61fdbf82c4c8ee4be3a22",
+        "dmgSize": 7365395,
+        "dmgSha256": "5a0ba290a5f01fbd4bc05d5295f5dccd2ea54fd4340012e46edd50b9d9c4e533",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6706490,
-        "appZipSha256": "1760fdd5d4cc03343224b45c104f0135637aa1412acd27e8fffe993755403bac",
+        "appZipSize": 6712000,
+        "appZipSha256": "bc23025e2d759784561ad8681a1ad805a34142208670b92cd0bcba5b4f7c0033",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
+        "releaseNotes": "Network settings now include proxy test and auto-detect actions for quickly verifying Binance K-line access through a local proxy."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
-        "binarySize": 14582128,
-        "binarySha256": "e99e5a8f17186bee9fbc2d348651dbd86d0f6a40ec9b910900b97f892f37a90f",
+        "binarySize": 14602640,
+        "binarySha256": "ed095352c52ca23f814f4e539e5d2fcc400f5b948eb1a5955e2db604db6511b0",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8128206,
-        "dmgSha256": "843ddcd5de0f4e89db00f7dfa90881495687e7763d331fbf74a9da60ccc5721a",
+        "dmgSize": 8136098,
+        "dmgSha256": "11fa01a9fe07c27e4ce0f3e9be5afeeaddf2de5326a9e2cf3e5d9ab7eca4a1a0",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7304951,
-        "appZipSha256": "6902a82c04a2ba8a3839d9c571071677f7724837cadaec79a619da96ac1aa245",
+        "appZipSize": 7309935,
+        "appZipSha256": "1ee6cd232212afa388e6eb0fb40028920ae42bb2f6b772b962e6cdbfbc34e2f5",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "TradeArk now auto-detects common local proxy ports on startup and enables a verified proxy when it can fetch Binance K-line data."
+        "releaseNotes": "Network settings now include proxy test and auto-detect actions for quickly verifying Binance K-line access through a local proxy."
       }
     }
   }
