@@ -26,7 +26,9 @@ function Remove-TradeArkDirectory {
         (Join-Path $env:LOCALAPPDATA "TradeArk"),
         (Join-Path $env:USERPROFILE ".tradeark"),
         (Join-Path $env:USERPROFILE ".codex\skills\tradeark-local"),
+        (Join-Path $env:USERPROFILE ".openclaw\skills\tradeark-local"),
         (Join-Path $env:USERPROFILE ".openclaw\plugin-skills\tradeark-local"),
+        (Join-Path $env:USERPROFILE ".qclaw\skills\tradeark-local"),
         (Join-Path $env:USERPROFILE ".config\opencode\skills\tradeark-local"),
         (Join-Path $env:USERPROFILE ".claude\skills\tradeark-local"),
         (Join-Path $env:USERPROFILE ".agents\skills\tradeark-local")
@@ -86,7 +88,9 @@ Remove-TradeArkDirectory -Path $InstallDir
 
 $skillDirs = @(
     (Join-Path $env:USERPROFILE ".codex\skills\tradeark-local"),
+    (Join-Path $env:USERPROFILE ".openclaw\skills\tradeark-local"),
     (Join-Path $env:USERPROFILE ".openclaw\plugin-skills\tradeark-local"),
+    (Join-Path $env:USERPROFILE ".qclaw\skills\tradeark-local"),
     (Join-Path $env:USERPROFILE ".config\opencode\skills\tradeark-local"),
     (Join-Path $env:USERPROFILE ".claude\skills\tradeark-local"),
     (Join-Path $env:USERPROFILE ".agents\skills\tradeark-local")

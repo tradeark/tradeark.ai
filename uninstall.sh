@@ -138,7 +138,7 @@ safe_remove_dir() {
     local path="$1"
     [[ -n "$path" ]] || return 0
     case "$path" in
-        "$HOME/.tradeark"|"$HOME/.codex/skills/tradeark-local"|"$HOME/.openclaw/plugin-skills/tradeark-local"|"$HOME/.config/opencode/skills/tradeark-local"|"$HOME/.claude/skills/tradeark-local"|"$HOME/.agents/skills/tradeark-local")
+        "$HOME/.tradeark"|"$HOME/.codex/skills/tradeark-local"|"$HOME/.openclaw/skills/tradeark-local"|"$HOME/.openclaw/plugin-skills/tradeark-local"|"$HOME/.qclaw/skills/tradeark-local"|"$HOME/.config/opencode/skills/tradeark-local"|"$HOME/.claude/skills/tradeark-local"|"$HOME/.agents/skills/tradeark-local")
             if [[ -d "$path" ]]; then
                 rm -rf -- "$path"
                 echo "Removed $path"
@@ -199,7 +199,9 @@ remove_file_if_exists "$INSTALL_DIR/$BINARY_NAME"
 
 for skill_dir in \
     "$HOME/.codex/skills/tradeark-local" \
+    "$HOME/.openclaw/skills/tradeark-local" \
     "$HOME/.openclaw/plugin-skills/tradeark-local" \
+    "$HOME/.qclaw/skills/tradeark-local" \
     "$HOME/.config/opencode/skills/tradeark-local" \
     "$HOME/.claude/skills/tradeark-local" \
     "$HOME/.agents/skills/tradeark-local"; do

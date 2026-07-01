@@ -1,22 +1,22 @@
 {
-  "version": "1.0.182.2269",
+  "version": "1.0.182.3240",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260701.023118Z",
-  "publishedAtUtc": "2026-07-01T02:31:18.0834451Z",
+  "displayVersion": "1.0.0+20260701.033600Z",
+  "publishedAtUtc": "2026-07-01T03:36:00Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6847887,
-  "installerSha256": "6e0153c4b4bdecc3b88278b87448aa7bc38e1adbca6bae832fbb733495f49c9f",
+  "installerSize": 6848772,
+  "installerSha256": "be378105270df726d9b059f52f9e11229fc78b1b1c284385ffe1d3bca413b3be",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19238912,
-  "backendSha256": "99b79cd24e74022b996987bfd4b5a72803866379c286cd167eceb497a0ab6b61",
+  "backendSize": 19244032,
+  "backendSha256": "d4f75a2a5aeac32ea6baa7737d6b267aaafe3b7fe6a7b33e1e4f472bc8a3fa68",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "Windows install now auto-registers the TradeArk OpenClaw skill after extraction, and the CLI can re-register it manually.",
+  "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6847887,
-      "installerSha256": "6e0153c4b4bdecc3b88278b87448aa7bc38e1adbca6bae832fbb733495f49c9f",
+      "installerSize": 6848772,
+      "installerSha256": "be378105270df726d9b059f52f9e11229fc78b1b1c284385ffe1d3bca413b3be",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19238912,
-      "backendSha256": "99b79cd24e74022b996987bfd4b5a72803866379c286cd167eceb497a0ab6b61",
+      "backendSize": 19244032,
+      "backendSha256": "d4f75a2a5aeac32ea6baa7737d6b267aaafe3b7fe6a7b33e1e4f472bc8a3fa68",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "Windows install now auto-registers the TradeArk OpenClaw skill after extraction, and the CLI can re-register it manually."
+      "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 22021032,
-        "binarySha256": "ba81a72fe53d9eb2234e9c48bbb7d80876bf878957a620ff4430f5abd7de1d0c",
+        "binarySize": 22025128,
+        "binarySha256": "d9001cbcbc6af68d673119a9ff3a117442c000e055d10877f0ee5d39e80dcecc",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "The CLI can register the TradeArk OpenClaw skill from the local machine."
+        "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
-        "binarySize": 13234160,
-        "binarySha256": "ec6341f6d86a6e475625d911db01d5228816e15a75c74663bb41de91cff58379",
+        "binarySize": 13234176,
+        "binarySha256": "d30d2f00588fe330ac5b25959d32f17d7b87ddb9eac9a7e5138e4efdaf6e02b1",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7338328,
-        "dmgSha256": "c3a57891c5fb2434492589a65dad0084d3cb225bb62f59def19c9327faf684c7",
+        "dmgSize": 7339213,
+        "dmgSha256": "bfbd463383f0547c4c77a631291ba08977fd80127fe54eb42ff102f7735aa1d7",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6685852,
-        "appZipSha256": "e84448e5a3aa73060b7d00509a4094251abc2da010a5813727ee516c58cd6acf",
+        "appZipSize": 6687617,
+        "appZipSha256": "1ca7905d945f6efb9a254cfc5b32b926d56c0ae7794fa09301ca31fa435be639",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "The CLI can register the TradeArk OpenClaw skill from the local machine."
+        "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
         "binarySize": 14541000,
-        "binarySha256": "373e0cc063f3647ac623818274bcfb300881b13da7ad052e505ee72cde01d26e",
+        "binarySha256": "6f5d5f041c9bd8f7980439e5d7fc8a33ecfcf911ffb2aa8faffcab113a23220f",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8104675,
-        "dmgSha256": "23b469bb0eb67f434fe7e6634da0f4ae9cde8cbddb3c6bc00162568bcb3d68e6",
+        "dmgSize": 8105973,
+        "dmgSha256": "d73873298c097fb2a5767b60560982be26332a0f4f61be4740fb298cf560fa9e",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7283138,
-        "appZipSha256": "f975235e754b658233ec23710442ac6a876594b7c0fcf507711ac3303bf56080",
+        "appZipSize": 7283664,
+        "appZipSha256": "b7196f901befe9da761574c5d4525a4e160dcedee3615cc411f0e493114ff738",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "The CLI can register the TradeArk OpenClaw skill from the local machine."
+        "releaseNotes": "OpenClaw skill registration now writes to the persistent user skill directory instead of OpenClaw's generated plugin-skills cache."
       }
     }
   }
