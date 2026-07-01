@@ -1,22 +1,22 @@
 {
-  "version": "1.0.181.12925",
+  "version": "1.0.182.2269",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260630.142140Z",
-  "publishedAtUtc": "2026-06-30T14:21:40.6418405Z",
+  "displayVersion": "1.0.0+20260701.023118Z",
+  "publishedAtUtc": "2026-07-01T02:31:18.0834451Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6845295,
-  "installerSha256": "15c2af77944a0c40aae33b8c3ef952c100cf94c64db3cc3eb3b73ec0425ae761",
+  "installerSize": 6847887,
+  "installerSha256": "6e0153c4b4bdecc3b88278b87448aa7bc38e1adbca6bae832fbb733495f49c9f",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19231744,
-  "backendSha256": "a4331f3c4985b7a434977dc166891309f058257f1c4239625cbdb1f65a75d8e4",
+  "backendSize": 19238912,
+  "backendSha256": "99b79cd24e74022b996987bfd4b5a72803866379c286cd167eceb497a0ab6b61",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "Web UI login now blocks repeated failures by IP, the CLI can clear login lockouts, and the Windows installer no longer collides with PowerShell's Host variable.",
+  "releaseNotes": "Windows install now auto-registers the TradeArk OpenClaw skill after extraction, and the CLI can re-register it manually.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6845295,
-      "installerSha256": "15c2af77944a0c40aae33b8c3ef952c100cf94c64db3cc3eb3b73ec0425ae761",
+      "installerSize": 6847887,
+      "installerSha256": "6e0153c4b4bdecc3b88278b87448aa7bc38e1adbca6bae832fbb733495f49c9f",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19231744,
-      "backendSha256": "a4331f3c4985b7a434977dc166891309f058257f1c4239625cbdb1f65a75d8e4",
+      "backendSize": 19238912,
+      "backendSha256": "99b79cd24e74022b996987bfd4b5a72803866379c286cd167eceb497a0ab6b61",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "Web UI login now blocks repeated failures by IP, the CLI can clear login lockouts, and the Windows installer no longer collides with PowerShell's Host variable."
+      "releaseNotes": "Windows install now auto-registers the TradeArk OpenClaw skill after extraction, and the CLI can re-register it manually."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 22021064,
-        "binarySha256": "41b77e7fd44e44a26497dc678267a5600af12df7a22e490f3b5053ac01360708",
+        "binarySize": 22021032,
+        "binarySha256": "ba81a72fe53d9eb2234e9c48bbb7d80876bf878957a620ff4430f5abd7de1d0c",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "Web UI login now blocks repeated failures by IP, and the CLI can clear login lockouts from the local machine."
+        "releaseNotes": "The CLI can register the TradeArk OpenClaw skill from the local machine."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
         "binarySize": 13234160,
-        "binarySha256": "f9c19b492f7c0d9cb227ddfb7664b937f122702c7fe0c30f9c2a25996babd9bb",
+        "binarySha256": "ec6341f6d86a6e475625d911db01d5228816e15a75c74663bb41de91cff58379",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7337148,
-        "dmgSha256": "da2027e838ddb046befa762ae2d0b4086579d6528f78f7cd48abc493b6b84b46",
+        "dmgSize": 7338328,
+        "dmgSha256": "c3a57891c5fb2434492589a65dad0084d3cb225bb62f59def19c9327faf684c7",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6684437,
-        "appZipSha256": "2e2969dad6db5ceb92c9ceef08e06d6c13ffc5cb2578b0a0f5350af67597dce3",
+        "appZipSize": 6685852,
+        "appZipSha256": "e84448e5a3aa73060b7d00509a4094251abc2da010a5813727ee516c58cd6acf",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "Web UI login now blocks repeated failures by IP, and the CLI can clear login lockouts from the local machine."
+        "releaseNotes": "The CLI can register the TradeArk OpenClaw skill from the local machine."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
-        "binarySize": 14532800,
-        "binarySha256": "51b17111ac3c77f2ef65fae18a1ad0f5bf3008769125fb9ef1c6db3d1c7f4666",
+        "binarySize": 14541000,
+        "binarySha256": "373e0cc063f3647ac623818274bcfb300881b13da7ad052e505ee72cde01d26e",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8105153,
-        "dmgSha256": "b0c1ef2ebe65b1cbc87711df6088eb3de5bbd856e02eb00c6916d253bf87d8d2",
+        "dmgSize": 8104675,
+        "dmgSha256": "23b469bb0eb67f434fe7e6634da0f4ae9cde8cbddb3c6bc00162568bcb3d68e6",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7281595,
-        "appZipSha256": "91263cc739c3309a61bb6b2659f837ff22d3d459c93ab6c7777609192d80ebbf",
+        "appZipSize": 7283138,
+        "appZipSha256": "f975235e754b658233ec23710442ac6a876594b7c0fcf507711ac3303bf56080",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "Web UI login now blocks repeated failures by IP, and the CLI can clear login lockouts from the local machine."
+        "releaseNotes": "The CLI can register the TradeArk OpenClaw skill from the local machine."
       }
     }
   }

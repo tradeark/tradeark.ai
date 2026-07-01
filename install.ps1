@@ -190,6 +190,25 @@ function Install-Archive {
     }
 }
 
+function Register-OpenClawSkill {
+    $executorPath = Join-Path $resolvedInstallDir "TradeArk.exe"
+    if (-not (Test-Path $executorPath)) {
+        Write-Host "OpenClaw skill registration skipped: TradeArk.exe not found." -ForegroundColor Yellow
+        return
+    }
+
+    try {
+        Write-Host "Registering OpenClaw skill..." -ForegroundColor Blue
+        & $executorPath agents register-openclaw-skill
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "OpenClaw skill registration exited with code $LASTEXITCODE." -ForegroundColor Yellow
+        }
+    }
+    catch {
+        Write-Host "OpenClaw skill registration failed: $($_.Exception.Message)" -ForegroundColor Yellow
+    }
+}
+
 function Launch-PortablePackage {
     if (-not $Launch) {
         return
@@ -220,6 +239,7 @@ function Show-Completion {
     Write-Host "First open: choose public access or username/password access for the local Web UI." -ForegroundColor Green
     Write-Host "Reset later from Settings > Web UI Access or with: $resolvedInstallDir\TradeArk.exe web-ui set-password --username <name>" -ForegroundColor Green
     Write-Host "Clear login lockouts with: $resolvedInstallDir\TradeArk.exe web-ui clear-login-locks" -ForegroundColor Green
+    Write-Host "Re-register OpenClaw skill with: $resolvedInstallDir\TradeArk.exe agents register-openclaw-skill" -ForegroundColor Green
 }
 
 function Main {
@@ -227,6 +247,7 @@ function Main {
     Show-CompatibilityWarning
     Download-Archive
     Install-Archive
+    Register-OpenClawSkill
     Launch-PortablePackage
     Show-Completion
 }
