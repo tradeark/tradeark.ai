@@ -1,22 +1,22 @@
 {
-  "version": "1.0.182.11980",
+  "version": "1.0.182.12347",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260701.131841Z",
-  "publishedAtUtc": "2026-07-01T13:18:41.1621507Z",
+  "displayVersion": "1.0.0+20260701.134309Z",
+  "publishedAtUtc": "2026-07-01T13:43:09.1506161Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6889938,
-  "installerSha256": "6ee1b96f53e36aafd0fb3960650cf4d26eaeb108b7cdbb0526d7838e1f67f3d6",
+  "installerSize": 6889811,
+  "installerSha256": "52e61531876a7b197a286cf2dbbd1cd21be05050f264658733dc9117c1403916",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
   "backendSize": 19361792,
-  "backendSha256": "2c09efa182952975b47271f01c7b342ecc6bf098f2a9f9120fa750bef9cd24e4",
+  "backendSha256": "b1e700d0eb6d62dc9397369580d8929d51ace1795cabbd9728d5ba4d70453b41",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable.",
+  "releaseNotes": "AI technical analysis now restores the original single one-click action button, choosing Long or Short from the analysis trend while staying visible when accounts are not loaded yet.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6889938,
-      "installerSha256": "6ee1b96f53e36aafd0fb3960650cf4d26eaeb108b7cdbb0526d7838e1f67f3d6",
+      "installerSize": 6889811,
+      "installerSha256": "52e61531876a7b197a286cf2dbbd1cd21be05050f264658733dc9117c1403916",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
       "backendSize": 19361792,
-      "backendSha256": "2c09efa182952975b47271f01c7b342ecc6bf098f2a9f9120fa750bef9cd24e4",
+      "backendSha256": "b1e700d0eb6d62dc9397369580d8929d51ace1795cabbd9728d5ba4d70453b41",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
+      "releaseNotes": "AI technical analysis now restores the original single one-click action button, choosing Long or Short from the analysis trend while staying visible when accounts are not loaded yet."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
         "binarySize": 22115496,
-        "binarySha256": "be682d55b1928ffe54f040e0468c48c6bbcd058e38c9221533ab6c88d765a62f",
+        "binarySha256": "e2f40fed31be0f33faf34d720d43264b2f997d2c49e9e6331a23991cdb9c9511",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
+        "releaseNotes": "AI technical analysis now restores the original single one-click action button, choosing Long or Short from the analysis trend while staying visible when accounts are not loaded yet."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
         "binarySize": 13316944,
-        "binarySha256": "596a73ace0b4891aba7fe7dad29c89d25b1fb75633e13e0b49a65e97182567df",
+        "binarySha256": "d36849179396c61c1df2ae31bc728a805253d9ceb18ef22e51ffcf381c6d9e41",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7374245,
-        "dmgSha256": "9e921f82903ed868b591e664514a63ec8dc714baf52315da9f0ad36f2bd5af55",
+        "dmgSize": 7374406,
+        "dmgSha256": "5cd635d30c3f16081e157ccf9b5629e3813f86d80ec0e600356774187f3d0b21",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6723078,
-        "appZipSha256": "7865b1560e2cbaa1b46364f42db10a2141e7c34030fc5050dea428eb6d4cf5a9",
+        "appZipSize": 6723144,
+        "appZipSha256": "d06b66c1c094dbfb7ce7eadcd1b1b9f29dd4cf804963a8016e108c432f669823",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
+        "releaseNotes": "AI technical analysis now restores the original single one-click action button, choosing Long or Short from the analysis trend while staying visible when accounts are not loaded yet."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
         "binarySize": 14619048,
-        "binarySha256": "e4ff0609c8babfee8573e4a88e4a051b367e3e4770a1d914b3e1071a2176ab6a",
+        "binarySha256": "7b4c4592b5dc2e06dccc003b08c922389a6ca2cd2ae8f62d85eb4dafa1078405",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8149813,
-        "dmgSha256": "c1383feb6cf500084fa234cd4cb2f8f3fa8b89ed1e468b34030f75917a066162",
+        "dmgSize": 8149834,
+        "dmgSha256": "d5d31ec2dfa94d3782e28c479a33c7f06b0277ef138dd15f5f488dc335c3b34e",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7319640,
-        "appZipSha256": "682bf5ea7f3acc0ded2d025baa328d950923579953217db9f9a554c6b156b737",
+        "appZipSize": 7319714,
+        "appZipSha256": "7a155ff82c9f7676a64bce952056916ea6f56894f1d4a95369a3badc2aa9aeec",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "AI technical analysis now always shows separate one-click Long and Short buttons in the chart analysis card, with clearer disabled state while accounts are unavailable."
+        "releaseNotes": "AI technical analysis now restores the original single one-click action button, choosing Long or Short from the analysis trend while staying visible when accounts are not loaded yet."
       }
     }
   }
