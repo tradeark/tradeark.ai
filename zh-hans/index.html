@@ -386,15 +386,12 @@
                         <span class="badge bg-secondary align-self-center">Windows x64 · 1.0.0+20260701.033600Z</span>
                     </div>
                     <p class="text-muted mb-2">将 ZIP 解压到任意用户可写目录，然后运行本地启动器：</p>
-                    <div class="code-block mb-3 position-relative command-copy-block">
-                        <pre class="mb-0 guide-code">1. 下载并解压 tradeark_windows_portable.zip
-2. 打开解压后的文件夹
-3. 运行 Start TradeArk.cmd
-4. Your browser opens the local UI and the first-run access wizard</pre>
-                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
-                            <i class="bi bi-clipboard"></i>
-                        </button>
-                    </div>
+                    <ol class="install-steps-list mb-3">
+                        <li>下载并解压 tradeark_windows_portable.zip</li>
+                        <li>打开解压后的文件夹</li>
+                        <li>运行 Start TradeArk.cmd</li>
+                        <li>Your browser opens the local UI and the first-run access wizard</li>
+                    </ol>
                     <p class="text-muted mb-2">如果你更喜欢用脚本安装到 LocalAppData，请使用这个 PowerShell 辅助脚本：</p>
                     <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">Invoke-WebRequest -Uri https://tradeark.ai/install.ps1 -OutFile install.ps1
@@ -423,15 +420,12 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                         <span class="badge bg-secondary align-self-center">macOS 13+ · Apple Silicon / Intel</span>
                     </div>
                     <p class="text-muted mb-2">对大多数 macOS 桌面用户来说，直接使用打包好的应用即可：</p>
-                    <div class="code-block mb-3 position-relative command-copy-block">
-                        <pre class="mb-0 guide-code">1. 下载并打开 TradeArk macOS 安装包 (.dmg)
-2. 将下载的应用拖入 /Applications
-3. 打开应用，然后使用菜单栏图标在浏览器中打开本地界面
-4. 通过菜单重启本地服务，或打开后台自动启动</pre>
-                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
-                            <i class="bi bi-clipboard"></i>
-                        </button>
-                    </div>
+                    <ol class="install-steps-list mb-3">
+                        <li>下载并打开 TradeArk macOS 安装包 (.dmg)</li>
+                        <li>将下载的应用拖入 /Applications</li>
+                        <li>打开应用，然后使用菜单栏图标在浏览器中打开本地界面</li>
+                        <li>通过菜单重启本地服务，或打开后台自动启动</li>
+                    </ol>
                     <p class="text-muted mb-2">这个 DMG 可以在 Finder 中正常打开，但还没有完成 Apple notarization。第一次打开时，macOS 仍可能要求你右键应用并选择一次“打开”。</p>
                     <p class="text-muted mb-2">如果你需要命令行部署或无人值守安装，也可以继续使用一行安装命令：</p>
                     <div class="code-block mb-4 position-relative command-copy-block">

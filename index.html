@@ -386,15 +386,12 @@
                         <span class="badge bg-secondary align-self-center">Windows x64 · 1.0.0+20260701.033600Z</span>
                     </div>
                     <p class="text-muted mb-2">Extract the ZIP into any user-writable folder, then run the local launcher:</p>
-                    <div class="code-block mb-3 position-relative command-copy-block">
-                        <pre class="mb-0 guide-code">1. Download and extract tradeark_windows_portable.zip
-2. Open the extracted folder
-3. Run Start TradeArk.cmd
-4. Your browser opens the local UI and the first-run access wizard</pre>
-                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
-                            <i class="bi bi-clipboard"></i>
-                        </button>
-                    </div>
+                    <ol class="install-steps-list mb-3">
+                        <li>Download and extract tradeark_windows_portable.zip</li>
+                        <li>Open the extracted folder</li>
+                        <li>Run Start TradeArk.cmd</li>
+                        <li>Your browser opens the local UI and the first-run access wizard</li>
+                    </ol>
                     <p class="text-muted mb-2">If you prefer a scripted install into LocalAppData, use the PowerShell helper:</p>
                     <div class="code-block mb-3 position-relative command-copy-block">
                         <pre class="mb-0 guide-code">Invoke-WebRequest -Uri https://tradeark.ai/install.ps1 -OutFile install.ps1
@@ -423,15 +420,12 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Yes</pre>
                         <span class="badge bg-secondary align-self-center">macOS 13+ · Apple Silicon / Intel</span>
                     </div>
                     <p class="text-muted mb-2">For most macOS desktop users, use the packaged app:</p>
-                    <div class="code-block mb-3 position-relative command-copy-block">
-                        <pre class="mb-0 guide-code">1. Download and open the TradeArk macOS package (.dmg)
-2. Drag the downloaded app into /Applications
-3. Open the app and use the menu bar icon to open the local UI in your browser
-4. Use the menu to restart the local service or turn on background startup</pre>
-                        <button type="button" class="btn btn-sm btn-outline-warning copy-btn" title="Copy" aria-label="Copy" onclick="copyCodeBlock(this)">
-                            <i class="bi bi-clipboard"></i>
-                        </button>
-                    </div>
+                    <ol class="install-steps-list mb-3">
+                        <li>Download and open the TradeArk macOS package (.dmg)</li>
+                        <li>Drag the downloaded app into /Applications</li>
+                        <li>Open the app and use the menu bar icon to open the local UI in your browser</li>
+                        <li>Use the menu to restart the local service or turn on background startup</li>
+                    </ol>
                     <p class="text-muted mb-2">This DMG can be opened normally in Finder, but it is not yet Apple notarized. The first time, macOS may still ask you to right click the app and choose Open once.</p>
                     <p class="text-muted mb-2">If you need command-line deployment or unattended setup, you can still use the one-line install command:</p>
                     <div class="code-block mb-4 position-relative command-copy-block">

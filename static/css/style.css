@@ -436,6 +436,28 @@ h6 {
     box-shadow: 0 20px 52px rgba(0, 0, 0, 0.32);
 }
 
+.install-steps-list {
+    margin: 0;
+    padding: 0.95rem 1rem 0.95rem 2.25rem;
+    border: 1px solid rgba(125, 248, 255, 0.16);
+    border-radius: 8px;
+    background: rgba(3, 9, 14, 0.42);
+    color: var(--muted);
+}
+
+.install-steps-list li {
+    padding-left: 0.2rem;
+}
+
+.install-steps-list li + li {
+    margin-top: 0.45rem;
+}
+
+.install-steps-list li::marker {
+    color: var(--cyan);
+    font-weight: 800;
+}
+
 .feature-icon,
 .mode-icon,
 .step-number,
