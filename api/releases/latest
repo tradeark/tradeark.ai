@@ -1,22 +1,22 @@
 {
-  "version": "1.0.191.3074",
+  "version": "1.0.191.3456",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260710.032458Z",
-  "publishedAtUtc": "2026-07-10T03:24:58.2613061Z",
+  "displayVersion": "1.0.0+20260710.035026Z",
+  "publishedAtUtc": "2026-07-10T03:50:26.6240096Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 6928988,
-  "installerSha256": "e24c14153031c4237c25221e5986a618190a4389a9a6860ded7105ff7fdcf40b",
+  "installerSize": 6928029,
+  "installerSha256": "65df95b7887c0404454732891d96c081e103606e0b86651cda74fdd3371b7540",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19474944,
-  "backendSha256": "50825d1eb64f8520ea3c6412e67b7fe95ba296ada07f64adaa8c6ef5830e5279",
+  "backendSize": 19473920,
+  "backendSha256": "48d60643e32b409e0cd3e42beb8e316f20a1b323eb2012310a4c0397e75beb0d",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-  "releaseNotes": "Proxy auto-detect now also probes local port 7897 for Clash/Mihomo-style mixed proxy setups, alongside the existing common proxy ports.",
+  "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly.",
   "linuxAmd64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
   "macosArm64BinaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
   "macosArm64DmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
@@ -27,54 +27,54 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 6928988,
-      "installerSha256": "e24c14153031c4237c25221e5986a618190a4389a9a6860ded7105ff7fdcf40b",
+      "installerSize": 6928029,
+      "installerSha256": "65df95b7887c0404454732891d96c081e103606e0b86651cda74fdd3371b7540",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19474944,
-      "backendSha256": "50825d1eb64f8520ea3c6412e67b7fe95ba296ada07f64adaa8c6ef5830e5279",
+      "backendSize": 19473920,
+      "backendSha256": "48d60643e32b409e0cd3e42beb8e316f20a1b323eb2012310a4c0397e75beb0d",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
-      "releaseNotes": "Proxy auto-detect now also probes local port 7897 for Clash/Mihomo-style mixed proxy setups, alongside the existing common proxy ports."
+      "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
         "binarySize": 22181032,
-        "binarySha256": "f76e1bbac79116b227b62f68c5b8318dc3ca9fbcf55baf0e3fb80cad14a3971a",
+        "binarySha256": "4b9eef7eff18db45c302ccf6ffb559e28a15e14e816955d32f99eb9b78112abb",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
-        "releaseNotes": "Proxy auto-detect now also probes local port 7897 for Clash/Mihomo-style mixed proxy setups, alongside the existing common proxy ports."
+        "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly."
       }
     },
     "macos": {
       "arm64": {
         "binaryFilename": "tradeark_darwin_arm64",
         "binarySize": 13399584,
-        "binarySha256": "7f17e4bae6bff008d76385e3f29312e96d58a29afab8657e33b569237a24c7f1",
+        "binarySha256": "8d2c99b55250e0cc3cadf04bc439edae3d0dde77d25464e7112543f8601fa7f9",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_arm64",
         "dmgFilename": "signal_executor_darwin_arm64.dmg",
-        "dmgSize": 7408743,
-        "dmgSha256": "e88eb633fab386082c70a0f594b5d76321bdafb3d76214ed44abaa0b4fb3248d",
+        "dmgSize": 7408864,
+        "dmgSha256": "fdf52208bfdf4adacb1ca878b56750250e5746401e75605b788d445c370afc94",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64.dmg",
         "appZipFilename": "signal_executor_darwin_arm64_app.zip",
-        "appZipSize": 6753513,
-        "appZipSha256": "770be294bc2ed6a3e1c5261f59dd4a236ca2475e184b06fd3563d99ecdf6b605",
+        "appZipSize": 6753701,
+        "appZipSha256": "6a7146faedeceeb2359c4243433a7152affe8b8fb64f3ef66806a0dd05efedcd",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_arm64_app.zip",
-        "releaseNotes": "Proxy auto-detect now also probes local port 7897 for Clash/Mihomo-style mixed proxy setups, alongside the existing common proxy ports."
+        "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly."
       },
       "amd64": {
         "binaryFilename": "tradeark_darwin_amd64",
-        "binarySize": 14692840,
-        "binarySha256": "7f189a9d712d290945c613e6c782ae2aabd1647a93853717b4af06f0df56715a",
+        "binarySize": 14688744,
+        "binarySha256": "a54e8a4ea3597c989048118afbdc567c766ad4f808ecbbe4735f2a96dbe6b8af",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_darwin_amd64",
         "dmgFilename": "signal_executor_darwin_amd64.dmg",
-        "dmgSize": 8184563,
-        "dmgSha256": "c17ac69c393377c149adf737cef99767074398103bc689edffa0f635059618c1",
+        "dmgSize": 8184196,
+        "dmgSha256": "73fe28bf49977e56a45c1032a412134b16fd5b0cb008a2837b59a686b4f1fe81",
         "dmgUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64.dmg",
         "appZipFilename": "signal_executor_darwin_amd64_app.zip",
-        "appZipSize": 7353404,
-        "appZipSha256": "54655273bed9ed2f7a7272faf8845723c584b748fb8d79c24be420c52e3ec2e9",
+        "appZipSize": 7353045,
+        "appZipSha256": "0142e9996726c633adb4db3cfd4d557f7eaa3e75d3d9fc72fd35ee8478335611",
         "appZipUrl": "https://tradeark.ai/releases/latest/signal_executor_darwin_amd64_app.zip",
-        "releaseNotes": "Proxy auto-detect now also probes local port 7897 for Clash/Mihomo-style mixed proxy setups, alongside the existing common proxy ports."
+        "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly."
       }
     }
   }
