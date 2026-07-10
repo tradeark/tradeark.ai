@@ -31,7 +31,7 @@ $resolvedInstallDir = if ([string]::IsNullOrWhiteSpace($InstallDir)) {
 } else {
     [System.IO.Path]::GetFullPath($InstallDir)
 }
-$launcherPath = Join-Path $resolvedInstallDir "Start TradeArk.cmd"
+$launcherPath = Join-Path $resolvedInstallDir "start_tradeark.bat"
 $script:ReleaseManifest = $null
 
 Write-Host ""
@@ -187,6 +187,13 @@ function Install-Archive {
 
     Get-ChildItem -Path $extractPath | ForEach-Object {
         Copy-Item $_.FullName -Destination $resolvedInstallDir -Recurse -Force
+    }
+
+    foreach ($legacyLauncherName in @("Start TradeArk.cmd", "Start Signal Executor.cmd")) {
+        $legacyLauncherPath = Join-Path $resolvedInstallDir $legacyLauncherName
+        if (Test-Path $legacyLauncherPath) {
+            Remove-Item $legacyLauncherPath -Force
+        }
     }
 }
 
