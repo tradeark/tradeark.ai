@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tradeark.ai/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradeark.ai/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradeark.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tradeark.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tradeark.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://tradeark.ai/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tradeark.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://tradeark.ai/pt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tradeark.ai/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://tradeark.ai/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradeark.ai/"/>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/de/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/es/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/fr/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/it/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/ja/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/pt/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/zh-hans/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradeark.ai/zh-hant/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
