@@ -1,19 +1,19 @@
 {
-  "version": "1.0.193.12665",
+  "version": "1.0.238.2810",
   "baseVersion": "1.0.0",
-  "displayVersion": "1.0.0+20260712.140420Z",
-  "publishedAtUtc": "2026-07-12T14:04:20Z",
+  "displayVersion": "1.0.0+20260826.030721Z",
+  "publishedAtUtc": "2026-08-26T03:07:21.8504105Z",
   "publicBaseUrl": "https://tradeark.ai",
   "downloadBaseUrl": "https://tradeark.ai/releases/latest",
   "versionApiUrl": "https://tradeark.ai/api/releases/latest",
   "installerFilename": "tradeark_windows_portable.zip",
-  "installerSize": 7086006,
-  "installerSha256": "5692fa2171fd4ee7ee4fe3d277b694be1009eab28ad22bc1c5e266cd1c274e6e",
+  "installerSize": 7002922,
+  "installerSha256": "6dbd5461b47ebe7d47769094335c57e30c9b39d7d0f8e991b04456d0467f3f74",
   "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "windowsInstallerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
   "backendFilename": "tradeark_windows_amd64.exe",
-  "backendSize": 19972608,
-  "backendSha256": "795094760478d4a0d064d551e260c89f4f90610bde12a14a29680133b5105ed9",
+  "backendSize": 19683328,
+  "backendSha256": "7e4bd0b314d6f9b90187d6bee2422d69dad4d26a2e0aa680b7e072e45f09523d",
   "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "windowsBackendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
   "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly.",
@@ -27,20 +27,20 @@
   "platforms": {
     "windows": {
       "installerFilename": "tradeark_windows_portable.zip",
-      "installerSize": 7086006,
-      "installerSha256": "5692fa2171fd4ee7ee4fe3d277b694be1009eab28ad22bc1c5e266cd1c274e6e",
+      "installerSize": 7002922,
+      "installerSha256": "6dbd5461b47ebe7d47769094335c57e30c9b39d7d0f8e991b04456d0467f3f74",
       "installerUrl": "https://tradeark.ai/releases/latest/tradeark_windows_portable.zip",
       "backendFilename": "tradeark_windows_amd64.exe",
-      "backendSize": 19972608,
-      "backendSha256": "795094760478d4a0d064d551e260c89f4f90610bde12a14a29680133b5105ed9",
+      "backendSize": 19683328,
+      "backendSha256": "7e4bd0b314d6f9b90187d6bee2422d69dad4d26a2e0aa680b7e072e45f09523d",
       "backendUrl": "https://tradeark.ai/releases/latest/tradeark_windows_amd64.exe",
       "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly."
     },
     "linux": {
       "amd64": {
         "binaryFilename": "tradeark_linux_amd64",
-        "binarySize": 22463688,
-        "binarySha256": "f29c683398cc69d3494c921218b684ac66c78f409dae666bffdbfdc66c56b713",
+        "binarySize": 22226088,
+        "binarySha256": "2eafb2422444362067fb32e66ec2fb141ac2fdf3c2d9eb3b8ea31a74fce1c6a1",
         "binaryUrl": "https://tradeark.ai/releases/latest/tradeark_linux_amd64",
         "releaseNotes": "Fixes AI assistant local API calls so account and trading lookups bypass configured proxies and always call the local TradeArk service directly."
       }
